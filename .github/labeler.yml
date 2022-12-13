@@ -1,0 +1,86 @@
+version: v1
+
+labels:
+  - label: kind/feature
+    sync: true
+    matcher:
+      title: "^feature\\(.+\\): .+"
+
+  - label: kind/feature
+    sync: true
+    matcher:
+      title: "^feat\\(.+\\): .+"
+
+  - label: kind/fix
+    sync: true
+    matcher:
+      title: "^fix\\(.+\\): .+"
+
+  - label: kind/chore
+    sync: true
+    matcher:
+      title: "^chore\\(.+\\): .+"
+
+  - label: kind/refactor
+    sync: true
+    matcher:
+      title: "^refactor\\(.+\\): .+"
+
+  - label: kind/docs
+    sync: true
+    matcher:
+      title: "^docs\\(.+\\): .+"
+
+  - label: kind/dependencies
+    sync: true
+    matcher:
+      title: "^bump(\\(.+\\))?: .+"
+
+  - label: kind/dependencies
+    sync: true
+    matcher:
+      title: "^build(\\(.+\\))?: .+"
+
+  - label: area/workflows
+    sync: true
+    matcher:
+      files: ".github/**"
+
+  - label: area/packages
+    sync: true
+    matcher:
+      files: "packages/**"
+
+  - label: area/index
+    sync: true
+    matcher:
+      files: "src/pages/index.tsx"
+
+  - label: area/blog
+    sync: true
+    matcher:
+      files:
+        - "src/pages/blog.tsx"
+        - "src/content/blog/**"
+
+  - label: area/projects
+    sync: true
+    matcher:
+      files:
+        - "src/pages/projects.tsx"
+        - "src/content/projects/**"
+
+checks:
+  - context: "Semantic Pull Request"
+    url: "https://github.com/JellyfishSDK/jellyfish/blob/main/.github/labeler.yml"
+    description:
+      success: Ready for review & merge.
+      failure: "Missing semantic title or label for merge [kind(directory): title]"
+    labels:
+      any:
+        - kind/feature
+        - kind/fix
+        - kind/chore
+        - kind/refactor
+        - kind/docs
+        - kind/dependencies

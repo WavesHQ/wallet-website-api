@@ -1,0 +1,10 @@
+{
+  "extends": ["./node_modules/@waveshq/standard-web-linter"],
+  "rules": {
+    "react/destructuring-assignment": "off",
+    "import/prefer-default-export": "off",
+    "react/no-unstable-nested-components": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/no-unescaped-entities": "off"
+  }
+}
