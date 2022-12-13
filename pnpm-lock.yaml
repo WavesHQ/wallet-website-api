@@ -11,9 +11,9 @@ specifiers:
   '@types/lodash': ^4.14.191
   '@types/node': ^16.11.7
   '@types/react': ^18.0.25
-  '@waveshq/standard-defichain-jellyfishsdk': ^0.14.0
-  '@waveshq/standard-web': ^0.14.0
-  '@waveshq/standard-web-linter': ^0.14.0
+  '@waveshq/standard-defichain-jellyfishsdk': ^0.15.1
+  '@waveshq/standard-web': ^0.15.1
+  '@waveshq/standard-web-linter': ^0.15.1
   '@waveshq/wallet-core': ^0.1.0
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
@@ -35,8 +35,8 @@ dependencies:
   '@prismicio/client': 6.7.1
   '@prismicio/react': 2.5.0_almecxjcweid4kovuu7rrbiurm
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
-  '@waveshq/standard-defichain-jellyfishsdk': 0.14.0
-  '@waveshq/standard-web': 0.14.0_@next+env@13.0.6
+  '@waveshq/standard-defichain-jellyfishsdk': 0.15.1
+  '@waveshq/standard-web': 0.15.1_@next+env@13.0.6
   '@waveshq/wallet-core': 0.1.0
   autoprefixer: 10.4.13_postcss@8.4.20
   clsx: 1.2.1
@@ -60,7 +60,7 @@ devDependencies:
   '@types/lodash': 4.14.191
   '@types/node': 16.18.8
   '@types/react': 18.0.26
-  '@waveshq/standard-web-linter': 0.14.0_pfdqwu4op3ya37d2btxzqvhfm4
+  '@waveshq/standard-web-linter': 0.15.1_pfdqwu4op3ya37d2btxzqvhfm4
 
 packages:
 
@@ -1091,8 +1091,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-defichain-jellyfishsdk/0.14.0:
-    resolution: {integrity: sha512-/VfFW25MyDJRReTCTi67F6e5Q2VzB3FEWg+/2B5Bbali7VD9o/PotYpXKsEBC3PHcwjjb4hT0GzLyshbyP1qkA==}
+  /@waveshq/standard-defichain-jellyfishsdk/0.15.1:
+    resolution: {integrity: sha512-L38sUw7r/b26w78hr2dGUrV+f/8/X/mt1LyYr8nx5Yx5Ws+K4LQYw3WIIOMfeYd2cvh2ZIGeNB1GPQnLxuiLYg==}
     dependencies:
       '@defichain/jellyfish-address': 3.9.0_defichain@3.9.0
       '@defichain/jellyfish-api-core': 3.9.0_defichain@3.9.0
@@ -1110,8 +1110,8 @@ packages:
       - encoding
     dev: false
 
-  /@waveshq/standard-web-linter/0.14.0_pfdqwu4op3ya37d2btxzqvhfm4:
-    resolution: {integrity: sha512-Iwbn9qUBweSCFATmpRWz4jEKRzeRDD0YJ8WKuHFmU9hyOk+Zt8aLwWcxbk6arllpctjD5xPgPjfYuvxcPtWlLw==}
+  /@waveshq/standard-web-linter/0.15.1_pfdqwu4op3ya37d2btxzqvhfm4:
+    resolution: {integrity: sha512-zm/BhqtT+onzVtJp5eAj5xeam3g95Mi7gvPRgVA7AZaLfdRbFJMIqJ1KeelXYp8MRiZZbDdfZ8Hb1PvNzsNr+Q==}
     dependencies:
       eslint: 8.29.0
       eslint-config-airbnb: 19.0.4_u6r7wmyqgznou2plc6ye67x2ku
@@ -1125,6 +1125,7 @@ packages:
       eslint-plugin-prettier: 4.2.1_5dgjrgoi64tgrv3zzn3walur3u
       eslint-plugin-react: 7.31.11_eslint@8.29.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.29.0
+      eslint-plugin-simple-import-sort: 8.0.0_eslint@8.29.0
       husky: 8.0.2
       lint-staged: 13.1.0
       next: 13.0.6_biqbaboplfbrettd7655fr4n2y
@@ -1146,8 +1147,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.14.0_@next+env@13.0.6:
-    resolution: {integrity: sha512-eGp3YfyxuX3CYmoWE7ngRULtLgm63SqDNdypbWxpR2qRPeqAPpCCJQICIc+6iC3Hl9H7mqIugAxOapopcjn4MQ==}
+  /@waveshq/standard-web/0.15.1_@next+env@13.0.6:
+    resolution: {integrity: sha512-VNInz7irHdwEluOPMhig3opLNeOwIaxSlB3RMWoJATpxflkI/NDg9bA6pPwvkXIDCkLHhh3PszCYsIMenvAbPQ==}
     dependencies:
       '@netlify/ipx': 1.3.2
       '@types/react': 18.0.26
@@ -2521,6 +2522,14 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
+    dev: true
+
+  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.29.0:
+    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 8.29.0
     dev: true
 
   /eslint-scope/5.1.1:
