@@ -1,5 +1,5 @@
 import { Head } from "@components/commons/Head";
-import { Container } from "@components/commons/Container";
+import Container from "@components/commons/Container";
 
 export default function NotFound(): JSX.Element {
   return (
