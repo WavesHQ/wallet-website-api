@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@headlessui/react': ^1.7.4
+  '@headlessui/react': ^1.7.5
   '@netlify/plugin-lighthouse': ^4.0.3
   '@netlify/plugin-nextjs': ^4.29.3
   '@prismicio/client': ^6.7.1
