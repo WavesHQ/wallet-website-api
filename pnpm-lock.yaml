@@ -21,7 +21,7 @@ specifiers:
   date-fns: ^2.29.3
   lodash: ^4.17.21
   next: 13.0.7
-  next-sitemap: ^3.1.32
+  next-sitemap: ^3.1.42
   nextjs-progressbar: ^0.0.16
   prismic-reactjs: ^1.3.4
   react: 18.2.0
@@ -44,7 +44,7 @@ dependencies:
   date-fns: 2.29.3
   lodash: 4.17.21
   next: 13.0.7_biqbaboplfbrettd7655fr4n2y
-  next-sitemap: 3.1.32_yctveb4xazgnpnecintgjwhjki
+  next-sitemap: 3.1.42_yctveb4xazgnpnecintgjwhjki
   nextjs-progressbar: 0.0.16_next@13.0.7+react@18.2.0
   prismic-reactjs: 1.3.4_react@18.2.0
   react: 18.2.0
@@ -1276,7 +1276,7 @@ packages:
       '@types/react-dom': 18.0.9
       follow-redirects: 1.15.2
       next: 13.0.6_biqbaboplfbrettd7655fr4n2y
-      next-sitemap: 3.1.32_jdkzhavjz25nuekaaa6rmvh2fe
+      next-sitemap: 3.1.42_jdkzhavjz25nuekaaa6rmvh2fe
       nextjs-progressbar: 0.0.16_next@13.0.6+react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -4019,8 +4019,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /next-sitemap/3.1.32_jdkzhavjz25nuekaaa6rmvh2fe:
-    resolution: {integrity: sha512-jkIKpwLXpWWTPfmDO46+6nu4+qpar4CjvUwCR9rYZHWtzE/wFfaCVFKpGtFMl6MFjpu8GjiE6kWFEa7uF3bzzg==}
+  /next-sitemap/3.1.42_jdkzhavjz25nuekaaa6rmvh2fe:
+    resolution: {integrity: sha512-z/m440ZDCTxoE3FWbBWZLK66ZEh9e2R+j/Bm0d1Vo4PFkMi4yhWdIjWqhj//kyFyBvMYk3YWs8QQqVCCe15E6g==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
@@ -4033,8 +4033,8 @@ packages:
       next: 13.0.6_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /next-sitemap/3.1.32_yctveb4xazgnpnecintgjwhjki:
-    resolution: {integrity: sha512-jkIKpwLXpWWTPfmDO46+6nu4+qpar4CjvUwCR9rYZHWtzE/wFfaCVFKpGtFMl6MFjpu8GjiE6kWFEa7uF3bzzg==}
+  /next-sitemap/3.1.42_yctveb4xazgnpnecintgjwhjki:
+    resolution: {integrity: sha512-z/m440ZDCTxoE3FWbBWZLK66ZEh9e2R+j/Bm0d1Vo4PFkMi4yhWdIjWqhj//kyFyBvMYk3YWs8QQqVCCe15E6g==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
