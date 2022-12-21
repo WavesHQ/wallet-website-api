@@ -287,7 +287,7 @@ export default async function handle(
     {
       id: "ocg_cfp_dfip",
       name: "OCG CFP/DFIP proposals",
-      stage: "public",
+      stage: "alpha",
       version: ">2.14.0",
       description: "Display CFP/DFIP proposals for OCG",
       networks: [
