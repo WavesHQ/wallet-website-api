@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
-import { EnvironmentNetwork, FeatureFlag } from "@waveshq/wallet-core";
+import { EnvironmentNetwork, FeatureFlag } from "@waveshq/walletkit-core";
 import { runMiddleware } from "../../../../utils/middleware";
 
 export const cors = Cors({
@@ -275,6 +275,21 @@ export default async function handle(
       stage: "public",
       version: ">2.5.0",
       description: "Display payback DUSD loan with DUSD collateral",
+      networks: [
+        EnvironmentNetwork.MainNet,
+        EnvironmentNetwork.TestNet,
+        EnvironmentNetwork.RemotePlayground,
+        EnvironmentNetwork.LocalPlayground,
+      ],
+      platforms: ["ios", "android", "web"],
+      app: ["MOBILE_LW"],
+    },
+    {
+      id: "ocg_cfp_dfip",
+      name: "OCG CFP/DFIP proposals",
+      stage: "alpha",
+      version: ">2.14.0",
+      description: "Display CFP/DFIP proposals for OCG",
       networks: [
         EnvironmentNetwork.MainNet,
         EnvironmentNetwork.TestNet,
