@@ -284,5 +284,20 @@ export default async function handle(
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
     },
+    {
+      id: "ocg_cfp_dfip",
+      name: "OCG CFP/DFIP proposals",
+      stage: "public",
+      version: ">2.14.0",
+      description: "Display CFP/DFIP proposals for OCG",
+      networks: [
+        EnvironmentNetwork.MainNet,
+        EnvironmentNetwork.TestNet,
+        EnvironmentNetwork.RemotePlayground,
+        EnvironmentNetwork.LocalPlayground,
+      ],
+      platforms: ["ios", "android", "web"],
+      app: ["MOBILE_LW"],
+    },
   ]);
 }
