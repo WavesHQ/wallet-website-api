@@ -11,9 +11,9 @@ specifiers:
   '@types/lodash': ^4.14.191
   '@types/node': ^16.11.7
   '@types/react': ^18.0.26
-  '@waveshq/standard-defichain-jellyfishsdk': ^0.21.0
-  '@waveshq/standard-web': ^0.21.0
-  '@waveshq/standard-web-linter': ^0.21.0
+  '@waveshq/standard-defichain-jellyfishsdk': ^0.22.0
+  '@waveshq/standard-web': ^0.22.0
+  '@waveshq/standard-web-linter': ^0.22.0
   '@waveshq/walletkit-core': ^0.20.0
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
@@ -35,8 +35,8 @@ dependencies:
   '@prismicio/client': 6.7.3
   '@prismicio/react': 2.5.1_wrodp6pbc64pk2dl4m4urioxiu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
-  '@waveshq/standard-defichain-jellyfishsdk': 0.21.0
-  '@waveshq/standard-web': 0.21.0_342gk3ewz65hlfngd5gvlkw4xy
+  '@waveshq/standard-defichain-jellyfishsdk': 0.22.0
+  '@waveshq/standard-web': 0.22.0_342gk3ewz65hlfngd5gvlkw4xy
   '@waveshq/walletkit-core': 0.20.0
   autoprefixer: 10.4.13_postcss@8.4.20
   clsx: 1.2.1
@@ -60,7 +60,7 @@ devDependencies:
   '@types/lodash': 4.14.191
   '@types/node': 16.18.8
   '@types/react': 18.0.26
-  '@waveshq/standard-web-linter': 0.21.0_pfdqwu4op3ya37d2btxzqvhfm4
+  '@waveshq/standard-web-linter': 0.22.0_pfdqwu4op3ya37d2btxzqvhfm4
 
 packages:
 
@@ -1121,8 +1121,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-defichain-jellyfishsdk/0.21.0:
-    resolution: {integrity: sha512-hqURvG1PB1+Qe9fHkBFMQWe9LWtsRT/BxKUGUInKKCba0Ij5iIW4EdqmXLWvzkgOE1XTJUIYDVPmd2M+lEOPXQ==}
+  /@waveshq/standard-defichain-jellyfishsdk/0.22.0:
+    resolution: {integrity: sha512-4ZYQ61AjgPY9zvVwXI58+M5v3nm0ygY7GGleT4o/K6CWa36jG+a6lxeQdEh6VbJwpDWmDW7vlFn2JdKoggUzDg==}
     dependencies:
       '@defichain/jellyfish-address': 3.11.0_defichain@3.11.0
       '@defichain/jellyfish-api-core': 3.11.0_defichain@3.11.0
@@ -1140,8 +1140,8 @@ packages:
       - encoding
     dev: false
 
-  /@waveshq/standard-web-linter/0.21.0_pfdqwu4op3ya37d2btxzqvhfm4:
-    resolution: {integrity: sha512-IAQ1XSVX+b8yMQiK4r1IKjzPWJzDJbSATQMwOkLn3tDHub6El/EkABAuy8FLukTDVTPVM0jVaRIf2lZvprhRtw==}
+  /@waveshq/standard-web-linter/0.22.0_pfdqwu4op3ya37d2btxzqvhfm4:
+    resolution: {integrity: sha512-3C5eeB+kW6finBvrS6viq2ieT3TNF0N5IsAlYJsqIUxpQDXHphQPdAoriNDcpv0zMjxu2ha+9inoCDKy0QxJRw==}
     dependencies:
       eslint: 8.30.0
       eslint-config-airbnb: 19.0.4_j3uyvjk2vb2gkfzhvqukeu5rlq
@@ -1177,8 +1177,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.21.0_342gk3ewz65hlfngd5gvlkw4xy:
-    resolution: {integrity: sha512-3FjHeNQlcKNWwyREqBfgX1tIvOPOS9FeMtpyMeZJemtFMH4tiaeJVrLS8NmsDhcw6iqtZ1wPWx8SUx4oPGN+Nw==}
+  /@waveshq/standard-web/0.22.0_342gk3ewz65hlfngd5gvlkw4xy:
+    resolution: {integrity: sha512-AKEoPvoga76vIGw4Yb4tSm8NUgawDokyKt2E8wyfrf4nmTT4SkNrWsia8DwXvV5JTZRGxcoT5hj3QYNZKhDvIA==}
     dependencies:
       '@netlify/ipx': 1.3.2
       '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq

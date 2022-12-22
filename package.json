@@ -15,8 +15,8 @@
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.1",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@waveshq/standard-defichain-jellyfishsdk": "^0.21.0",
-    "@waveshq/standard-web": "^0.21.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.22.0",
+    "@waveshq/standard-web": "^0.22.0",
     "@waveshq/walletkit-core": "^0.20.0",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
@@ -40,6 +40,6 @@
     "@types/lodash": "^4.14.191",
     "@types/node": "^16.11.7",
     "@types/react": "^18.0.26",
-    "@waveshq/standard-web-linter": "^0.21.0"
+    "@waveshq/standard-web-linter": "^0.22.0"
   }
 }
