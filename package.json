@@ -15,9 +15,9 @@
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.1",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@waveshq/standard-defichain-jellyfishsdk": "^0.27.2",
-    "@waveshq/standard-web": "^0.27.2",
-    "@waveshq/walletkit-core": "^0.21.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.29.0",
+    "@waveshq/standard-web": "^0.29.0",
+    "@waveshq/walletkit-core": "^0.24.0",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
@@ -33,7 +33,7 @@
     "schema-dts": "^1.1.0"
   },
   "devDependencies": {
-    "@waveshq/standard-web-linter": "^0.27.2",
+    "@waveshq/standard-web-linter": "^0.29.0",
     "@netlify/plugin-lighthouse": "^4.0.3",
     "@netlify/plugin-nextjs": "^4.30.0",
     "@types/cors": "^2.8.13",
