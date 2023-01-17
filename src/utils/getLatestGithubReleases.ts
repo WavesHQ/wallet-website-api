@@ -1,9 +1,3 @@
-const PLATFORMS: Array<[Array<string>, string]> = [
-  [["linux-x86_64"], "amd64.AppImage.tar.gz"], // linux
-  [["darwin-x86_64", "darwin-aarch64"], "app.tar.gz"], // apple intel & apple silicon
-  [["windows-x86_64"], "x64_en-US.msi.zip"], // windows
-];
-
 export interface Release {
   version: string;
   notes: string;
@@ -15,6 +9,13 @@ export async function getLatestGithubRelease(repo: string): Promise<Release> {
   const githubLatestReleaseUrl = `https://api.github.com/repos/${repo}/releases/latest`;
 
   try {
+    const PLATFORMS = {
+      "linux-x86_64": "amd64.AppImage.tar.gz",
+      "darwin-x86_64": "app.tar.gz",
+      "darwin-aarch64": "app.tar.gz",
+      "windows-x86_64": "x64_en-US.msi.zip",
+    };
+
     const response = await fetch(githubLatestReleaseUrl);
     const release = await response.json();
 
@@ -27,32 +28,32 @@ export async function getLatestGithubRelease(repo: string): Promise<Release> {
       platforms: {},
     };
 
-    PLATFORMS.forEach(([for_platforms, extension]) => {
-      const urlAssets = (release.assets || []).filter((asset: any) =>
-        asset.name.endsWith(extension)
-      );
-      urlAssets.forEach((asset: any) => {
-        for_platforms.forEach((platform) => {
-          releaseResponse.platforms[platform] = {
-            ...releaseResponse.platforms[platform],
-            url: asset.browser_download_url,
-          };
-        });
-      });
-      const sigAssets = (release.assets || []).filter((asset: any) =>
-        asset.name.endsWith(`${extension}.sig`)
-      );
-      sigAssets.forEach(async (asset: any) => {
-        const sigFetchResponse = await fetch(asset.browser_download_url);
-        const sig = await sigFetchResponse.text();
-        for_platforms.forEach((platform) => {
-          releaseResponse.platforms[platform] = {
-            ...releaseResponse.platforms[platform],
-            signature: sig,
-          };
-        });
-      });
-    });
+    await Promise.all(
+      release.assets.map(async (asset: any) =>
+        Promise.all(
+          Object.keys(PLATFORMS).map(async (platform) => {
+            if (asset.name.endsWith(PLATFORMS[platform])) {
+              releaseResponse.platforms[platform] = {
+                ...releaseResponse.platforms[platform],
+                url: asset.browser_download_url,
+              };
+            }
+            if (asset.name.endsWith(`${PLATFORMS[platform]}.sig`)) {
+              try {
+                const sigResponse = await fetch(asset.browser_download_url);
+                const sig = await sigResponse.text();
+                releaseResponse.platforms[platform] = {
+                  ...releaseResponse.platforms[platform],
+                  signature: sig,
+                };
+              } catch (error) {
+                throw new Error(error);
+              }
+            }
+          })
+        )
+      )
+    );
 
     return releaseResponse;
   } catch (error) {
