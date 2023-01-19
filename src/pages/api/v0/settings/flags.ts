@@ -287,10 +287,12 @@ export default async function handle(
     {
       id: "ocg_cfp_dfip",
       name: "CFP/DFIP proposal(s)",
-      stage: "beta",
-      version: ">2.13.1",
+      stage: "alpha",
+      version: ">2.14.0",
       description: "Allows the submission of CFP/DFIP proposals",
       networks: [
+        EnvironmentNetwork.MainNet,
+        EnvironmentNetwork.TestNet,
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
       ],
