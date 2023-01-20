@@ -14,7 +14,7 @@ specifiers:
   '@waveshq/standard-defichain-jellyfishsdk': ^0.33.0
   '@waveshq/standard-web': ^0.33.0
   '@waveshq/standard-web-linter': ^0.33.0
-  '@waveshq/walletkit-core': ^0.25.0
+  '@waveshq/walletkit-core': ^0.26.0
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
   cors: ^2.8.5
@@ -35,7 +35,7 @@ dependencies:
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@waveshq/standard-defichain-jellyfishsdk': 0.33.0
   '@waveshq/standard-web': 0.33.0_gxwbsnvufogiiovarinj54nmti
-  '@waveshq/walletkit-core': 0.25.0
+  '@waveshq/walletkit-core': 0.26.0
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
   cors: 2.8.5
@@ -1207,8 +1207,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@waveshq/walletkit-core/0.25.0:
-    resolution: {integrity: sha512-uoduI8Ctj25lKenzaT4GvTNniyjZQ7a1c7PTPos8ZGNVKOUIX/QtSab5VSDt6iJQSTFmTE1JALq/r4jpbKa86w==}
+  /@waveshq/walletkit-core/0.26.0:
+    resolution: {integrity: sha512-Dg0Hr4Kq2mGpq088CQgxsgi0aMylWBrykcNkVFOvjwHFnOaAb1lcRWk34rlUDQRAcR+9yN77Prp4MVNuVaXQ3w==}
     dependencies:
       bignumber.js: 9.1.1
     dev: false
