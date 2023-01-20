@@ -38,6 +38,6 @@
     "@types/cors": "^2.8.13",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26"
+    "@types/react": "^18.0.27"
   }
 }
