@@ -304,7 +304,7 @@ export default async function handle(
     },
     {
       id: "ocg_cfp_dfip",
-      name: "CFP/DFIP proposal(s)",
+      name: "Governance",
       stage: "public",
       version: ">2.14.0",
       description: "Allows the submission of CFP/DFIP proposals",
