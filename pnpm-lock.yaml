@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@headlessui/react': ^1.7.7
-  '@netlify/plugin-lighthouse': ^4.0.5
+  '@netlify/plugin-lighthouse': ^4.0.7
   '@netlify/plugin-nextjs': ^4.30.0
   '@prismicio/client': ^6.7.3
   '@prismicio/react': ^2.5.1
@@ -50,7 +50,7 @@ dependencies:
   schema-dts: 1.1.0_typescript@4.9.4
 
 devDependencies:
-  '@netlify/plugin-lighthouse': 4.0.5
+  '@netlify/plugin-lighthouse': 4.0.7
   '@netlify/plugin-nextjs': 4.30.0
   '@types/cors': 2.8.13
   '@types/lodash': 4.14.191
@@ -559,8 +559,8 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /@netlify/plugin-lighthouse/4.0.5:
-    resolution: {integrity: sha512-L73Z3oJW1YDjkkzqHPaj4GOD3dBQIeCcrKo21rb5yuzZIMfJvlnxcqyct/SlPf9+pO+e+ze7v45WHO9arkrmrg==}
+  /@netlify/plugin-lighthouse/4.0.7:
+    resolution: {integrity: sha512-J9oPEJ3/7KcWDGaHuxngSYzyiVR21DKEJ8AmfZs/G2nzG+4fXpLpWsJT/SyKj+tgD8DUxNjffZlCcZZPxIu6Vg==}
     engines: {node: '>=14.15 <19'}
     dependencies:
       chalk: 4.1.2
