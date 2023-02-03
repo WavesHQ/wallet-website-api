@@ -38,6 +38,6 @@ export default async function handle(
         macos:
           "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
       },
-    }
+    },
   ]);
 }
