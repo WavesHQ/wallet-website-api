@@ -16,12 +16,12 @@ export default async function handle(
     {
       lang: {
         en: "Generate astronomical returns through negative interest rates today!",
-        de: "Generate astronomical returns through negative interest rates today!",
+        de: "Erziele noch heute astronomische Renditen durch negative Zinsen!",
         "zh-Hans":
           "Generate astronomical returns through negative interest rates today!",
         "zh-Hant":
           "Generate astronomical returns through negative interest rates today!",
-        fr: "Generate astronomical returns through negative interest rates today!",
+        fr: "Générez des rendements astronomiques grâce aux taux d'intérêt négatifs dès aujourd'hui !",
         es: "Generate astronomical returns through negative interest rates today!",
         it: "Generate astronomical returns through negative interest rates today!",
       },
@@ -42,12 +42,12 @@ export default async function handle(
     {
       lang: {
         en: "Generate astronomical returns through negative interest rates today!",
-        de: "Generate astronomical returns through negative interest rates today!",
+        de: "Erziele noch heute astronomische Renditen durch negative Zinsen!",
         "zh-Hans":
           "Generate astronomical returns through negative interest rates today!",
         "zh-Hant":
           "Generate astronomical returns through negative interest rates today!",
-        fr: "Generate astronomical returns through negative interest rates today!",
+        fr: "Générez des rendements astronomiques grâce aux taux d'intérêt négatifs dès aujourd'hui !",
         es: "Generate astronomical returns through negative interest rates today!",
         it: "Generate astronomical returns through negative interest rates today!",
       },
