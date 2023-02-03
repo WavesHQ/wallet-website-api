@@ -12,5 +12,58 @@ export default async function handle(
   res: NextApiResponse<AnnouncementData[]>
 ): Promise<void> {
   await runMiddleware(req, res, cors);
-  res.json([]);
+  res.json([
+    {
+      lang: {
+        en: "Generate astronomical returns through negative interest rates today!",
+        de: "Generate astronomical returns through negative interest rates today!",
+        "zh-Hans":
+          "Generate astronomical returns through negative interest rates today!",
+        "zh-Hant":
+          "Generate astronomical returns through negative interest rates today!",
+        fr: "Generate astronomical returns through negative interest rates today!",
+        es: "Generate astronomical returns through negative interest rates today!",
+        it: "Generate astronomical returns through negative interest rates today!",
+      },
+      version: ">=2.16.0",
+      type: "OTHER_ANNOUNCEMENT",
+      id: "17",
+      url: {
+        ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        android:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        web: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        windows:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        macos:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+      },
+    },
+    {
+      lang: {
+        en: "Generate astronomical returns through negative interest rates today!",
+        de: "Generate astronomical returns through negative interest rates today!",
+        "zh-Hans":
+          "Generate astronomical returns through negative interest rates today!",
+        "zh-Hant":
+          "Generate astronomical returns through negative interest rates today!",
+        fr: "Generate astronomical returns through negative interest rates today!",
+        es: "Generate astronomical returns through negative interest rates today!",
+        it: "Generate astronomical returns through negative interest rates today!",
+      },
+      version: ">=100.0.0",
+      type: "SCAN",
+      id: "18",
+      url: {
+        ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        android:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        web: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        windows:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        macos:
+          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+      },
+    },
+  ]);
 }
