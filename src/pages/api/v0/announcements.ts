@@ -51,7 +51,7 @@ export default async function handle(
         es: "Generate astronomical returns through negative interest rates today!",
         it: "Generate astronomical returns through negative interest rates today!",
       },
-      version: ">=2.16.0",
+      version: ">=100.0.0",
       type: "SCAN",
       id: "18",
       url: {
