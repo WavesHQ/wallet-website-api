@@ -15,19 +15,19 @@ export default async function handle(
   res.json([
     {
       lang: {
-        en: "Generate astronomical returns through negative interest rates today!",
-        de: "Erziele noch heute astronomische Renditen durch negative Zinsen!",
+        en: "Find out how to earn returns through negative interest today.",
+        de: "Erfahre, wie du noch heute mit Negativzinsen Rendite erzielen kannst.",
         "zh-Hans":
-          "Generate astronomical returns through negative interest rates today!",
+          "Find out how to earn returns through negative interest today.",
         "zh-Hant":
-          "Generate astronomical returns through negative interest rates today!",
-        fr: "Générez des rendements astronomiques grâce aux taux d'intérêt négatifs dès aujourd'hui !",
-        es: "Generate astronomical returns through negative interest rates today!",
-        it: "Generate astronomical returns through negative interest rates today!",
+          "Find out how to earn returns through negative interest today.",
+        fr: "Découvrez dès aujourd'hui comment obtenir des rendements grâce aux intérêts négatifs.",
+        es: "Find out how to earn returns through negative interest today.",
+        it: "Find out how to earn returns through negative interest today.",
       },
       version: ">=2.16.0",
       type: "OTHER_ANNOUNCEMENT",
-      id: "17",
+      id: "19",
       url: {
         ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
         android:
@@ -41,19 +41,19 @@ export default async function handle(
     },
     {
       lang: {
-        en: "Generate astronomical returns through negative interest rates today!",
-        de: "Erziele noch heute astronomische Renditen durch negative Zinsen!",
+        en: "Find out how to earn returns through negative interest today.",
+        de: "Erfahre, wie du noch heute mit Negativzinsen Rendite erzielen kannst.",
         "zh-Hans":
-          "Generate astronomical returns through negative interest rates today!",
+          "Find out how to earn returns through negative interest today.",
         "zh-Hant":
-          "Generate astronomical returns through negative interest rates today!",
-        fr: "Générez des rendements astronomiques grâce aux taux d'intérêt négatifs dès aujourd'hui !",
-        es: "Generate astronomical returns through negative interest rates today!",
-        it: "Generate astronomical returns through negative interest rates today!",
+          "Find out how to earn returns through negative interest today.",
+        fr: "Découvrez dès aujourd'hui comment obtenir des rendements grâce aux intérêts négatifs.",
+        es: "Find out how to earn returns through negative interest today.",
+        it: "Find out how to earn returns through negative interest today.",
       },
       version: ">=100.0.0",
       type: "SCAN",
-      id: "18",
+      id: "20",
       url: {
         ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
         android:
