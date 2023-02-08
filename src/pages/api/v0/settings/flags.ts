@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
+// @ts-ignore
 import Cors from "cors";
 import { EnvironmentNetwork, FeatureFlag } from "@waveshq/walletkit-core";
 import { runMiddleware } from "../../../../utils/middleware";

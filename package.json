@@ -11,13 +11,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.7",
+    "@headlessui/react": "^1.7.10",
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.1",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@waveshq/standard-defichain-jellyfishsdk": "^0.33.0",
-    "@waveshq/standard-web": "^0.33.0",
-    "@waveshq/walletkit-core": "^0.27.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.41.1",
+    "@waveshq/standard-web": "^0.41.1",
+    "@waveshq/walletkit-core": "^0.32.1",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
@@ -25,19 +25,16 @@
     "lodash": "^4.17.21",
     "nextjs-progressbar": "^0.0.16",
     "prismic-reactjs": "^1.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-schemaorg": "^2.0.0",
     "schema-dts": "^1.1.0"
   },
   "devDependencies": {
-    "@waveshq/standard-web-linter": "^0.33.0",
+    "@waveshq/standard-web-linter": "^0.41.1",
     "@netlify/plugin-lighthouse": "^4.0.7",
-    "@netlify/plugin-nextjs": "^4.30.0",
+    "@netlify/plugin-nextjs": "^4.30.4",
     "@types/cors": "^2.8.13",
     "@types/lodash": "^4.14.191",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27"
+    "@types/node": "^18.13.0"
   }
 }
