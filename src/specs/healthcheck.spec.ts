@@ -7,10 +7,11 @@ const flags = "/api/v0/settings/flags";
 const announcements = "/api/v0/announcements";
 
 describe("API Healthcheck", () => {
-  it(`Should have status 200 for ${flags}`, () => {
-    axios
+  it(`Should have status 200 for ${flags}`, async () => {
+    await axios
       .get(baseUrl + flags)
       .then((response) => {
+        console.log(response.data);
         expect(response.status).toBe(200);
       })
       .catch((error) => {
@@ -18,10 +19,11 @@ describe("API Healthcheck", () => {
       });
   });
 
-  it(`Should have status 200 for ${announcements}`, () => {
-    axios
+  it(`Should have status 200 for ${announcements}`, async () => {
+    await axios
       .get(baseUrl + announcements)
       .then((response) => {
+        console.log(response.data);
         expect(response.status).toBe(200);
       })
       .catch((error) => {

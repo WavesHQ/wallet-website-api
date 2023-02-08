@@ -3,6 +3,5 @@ module.exports = function (api) {
 
   return {
     presets: ["next/babel"],
-    plugins: ["babel-plugin-jsx-remove-data-test-id"],
   };
 };

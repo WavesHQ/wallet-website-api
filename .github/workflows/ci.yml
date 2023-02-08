@@ -65,5 +65,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm start
+      - run: pnpm start &
+      - run: sleep 10
       - run: pnpm test
