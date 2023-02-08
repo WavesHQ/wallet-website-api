@@ -17,10 +17,8 @@ export default async function handle(
       lang: {
         en: "Find out how to earn returns through negative interest today.",
         de: "Erfahre, wie du noch heute mit Negativzinsen Rendite erzielen kannst.",
-        "zh-Hans":
-          "Find out how to earn returns through negative interest today.",
-        "zh-Hant":
-          "Find out how to earn returns through negative interest today.",
+        "zh-Hans": "立即了解如何通过负利率赚取回报。",
+        "zh-Hant": "立即了解如何通過負利率賺取回報。",
         fr: "Découvrez dès aujourd'hui comment obtenir des rendements grâce aux intérêts négatifs.",
         es: "Find out how to earn returns through negative interest today.",
         it: "Find out how to earn returns through negative interest today.",
@@ -29,24 +27,22 @@ export default async function handle(
       type: "OTHER_ANNOUNCEMENT",
       id: "19",
       url: {
-        ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        ios: "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         android:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
-        web: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
+        web: "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         windows:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         macos:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
       },
     },
     {
       lang: {
         en: "Find out how to earn returns through negative interest today.",
         de: "Erfahre, wie du noch heute mit Negativzinsen Rendite erzielen kannst.",
-        "zh-Hans":
-          "Find out how to earn returns through negative interest today.",
-        "zh-Hant":
-          "Find out how to earn returns through negative interest today.",
+        "zh-Hans": "立即了解如何通过负利率赚取回报。",
+        "zh-Hant": "立即了解如何通過負利率賺取回報。",
         fr: "Découvrez dès aujourd'hui comment obtenir des rendements grâce aux intérêts négatifs.",
         es: "Find out how to earn returns through negative interest today.",
         it: "Find out how to earn returns through negative interest today.",
@@ -55,14 +51,14 @@ export default async function handle(
       type: "SCAN",
       id: "20",
       url: {
-        ios: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+        ios: "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         android:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
-        web: "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
+        web: "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         windows:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
         macos:
-          "https://blog.defichain.com/generate-astronomical-returns-with-negative-interest-rates/",
+          "https://blog.defichain.com/earn-returns-with-negative-interest-rates/",
       },
     },
   ]);
