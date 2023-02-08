@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@headlessui/react': ^1.7.7
   '@netlify/plugin-lighthouse': ^4.0.7
-  '@netlify/plugin-nextjs': ^4.30.0
+  '@netlify/plugin-nextjs': ^4.30.4
   '@prismicio/client': ^6.7.3
   '@prismicio/react': ^2.5.1
   '@tailwindcss/line-clamp': ^0.4.2
@@ -51,7 +51,7 @@ dependencies:
 
 devDependencies:
   '@netlify/plugin-lighthouse': 4.0.7
-  '@netlify/plugin-nextjs': 4.30.0
+  '@netlify/plugin-nextjs': 4.30.4
   '@types/cors': 2.8.13
   '@types/lodash': 4.14.191
   '@types/node': 18.11.18
@@ -578,8 +578,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@netlify/plugin-nextjs/4.30.0:
-    resolution: {integrity: sha512-+MyfV6biKGVs/jQQUKGi2vN5aFFyRUTeEAItDiSvNhAUi0mOXEkEmu5JN7ZAQtL2oRIKKnxflsZDmtP3DdAahg==}
+  /@netlify/plugin-nextjs/4.30.4:
+    resolution: {integrity: sha512-Y72G0P2uKe4tJZuiKibBdIeBz69/0G00umzy8D96LHHs5jq4Yr/Wbp/u56YG3MA84E/qmOhBfyc20DGbPMe9tQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39
