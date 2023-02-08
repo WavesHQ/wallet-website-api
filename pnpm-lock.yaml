@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@headlessui/react': ^1.7.7
+  '@headlessui/react': ^1.7.10
   '@netlify/plugin-lighthouse': ^4.0.7
   '@netlify/plugin-nextjs': ^4.30.0
   '@prismicio/client': ^6.7.3
@@ -29,7 +29,7 @@ specifiers:
   schema-dts: ^1.1.0
 
 dependencies:
-  '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
   '@prismicio/client': 6.7.3
   '@prismicio/react': 2.5.1_wrodp6pbc64pk2dl4m4urioxiu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
@@ -291,8 +291,8 @@ packages:
       - supports-color
     dev: true
 
-  /@headlessui/react/1.7.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-BqDOd/tB9u2tA0T3Z0fn18ktw+KbVwMnkxxsGPIH2hzssrQhKB5n/6StZOyvLYP/FsYtvuXfi9I0YowKPv2c1w==}
+  /@headlessui/react/1.7.10_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-1m66h/5eayTEZVT2PI13/2PG3EVC7a9XalmUtVSC8X76pcyKYMuyX1XAL2RUtCr8WhoMa/KrDEyoeU5v+kSQOw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
