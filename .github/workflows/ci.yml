@@ -64,7 +64,6 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: pnpm start &
-      - run: sleep 10
+      - run: pnpm run dev
+      - run: sleep 20
       - run: pnpm test
