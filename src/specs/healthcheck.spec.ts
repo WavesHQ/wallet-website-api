@@ -1,7 +1,7 @@
 import axios from "axios";
 import { describe, it, expect } from "@jest/globals";
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "http://127.0.0.1:3000";
 
 const flags = "/api/v0/settings/flags";
 const announcements = "/api/v0/announcements";
