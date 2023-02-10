@@ -24,7 +24,9 @@ export default async function handle(
   await runMiddleware(req, res, cors);
 
   const PLAYGROUND_LIMITS = [
+    { symbol: "DFI", id: "0", daily: "1", max: "10" },
     { symbol: "BTC", id: "1", daily: "1", max: "5" },
+    { symbol: "ETH", id: "2", daily: "2", max: "6" },
   ];
 
   res.json({
