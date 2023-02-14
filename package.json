@@ -7,6 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "cypress:open": "cypress open",
+    "cypress:build": "CYPRESS=true next build",
     "cypress:run": "cypress run --headless --browser chrome",
     "build": "next build",
     "postbuild": "next-sitemap",
