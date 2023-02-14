@@ -319,5 +319,21 @@ export default async function handle(
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
     },
+    {
+      id: "maintenance",
+      name: "Maintenance",
+      stage: "beta",
+      version: ">2.14.0",
+      description: "Allows the display of maintenance screen when invoked",
+      networks: [
+        EnvironmentNetwork.MainNet,
+        EnvironmentNetwork.TestNet,
+        EnvironmentNetwork.RemotePlayground,
+        EnvironmentNetwork.LocalPlayground,
+        EnvironmentNetwork.DevNet,
+      ],
+      platforms: ["web"],
+      app: ["BRIDGE"],
+    },
   ]);
 }
