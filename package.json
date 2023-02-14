@@ -6,9 +6,12 @@
     "prepare": "husky install",
     "dev": "next dev",
     "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --headless --browser chrome",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start"
+    "start": "next start",
+    "test:e2e": "turbo run test:e2e"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.10",
@@ -30,11 +33,14 @@
     "schema-dts": "^1.1.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@testing-library/cypress": "^9.0.0",
     "@waveshq/standard-web-linter": "^0.42.1",
     "@netlify/plugin-lighthouse": "^4.0.7",
     "@netlify/plugin-nextjs": "^4.30.4",
     "@types/cors": "^2.8.13",
     "@types/lodash": "^4.14.191",
-    "@types/node": "^18.13.0"
+    "@types/node": "^18.13.0",
+    "cypress": "^12.5.1"
   }
 }
