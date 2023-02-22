@@ -22,17 +22,18 @@ export default async function handle(
 ): Promise<void> {
   await runMiddleware(req, res, cors);
 
-  const PLAYGROUND_LIMITS = [
-    { symbol: "DFI", id: "0", max: "100" },
-    { symbol: "BTC", id: "1", max: "10" },
-    { symbol: "ETH", id: "2", max: "10" },
+  const TESTNET_LIMITS = [
+    { symbol: "USDT", id: "5", max: "50000" },
+    { symbol: "BTC", id: "1", max: "5000" },
+    { symbol: "ETH", id: "2", max: "5000" },
+    { symbol: "USDC", id: "22", max: "2000" },
   ];
 
   res.json({
     DevNet: [],
     MainNet: [],
-    Playground: PLAYGROUND_LIMITS,
-    TestNet: PLAYGROUND_LIMITS,
-    [EnvironmentNetwork.LocalPlayground]: PLAYGROUND_LIMITS,
+    Playground: [],
+    TestNet: TESTNET_LIMITS,
+    [EnvironmentNetwork.LocalPlayground]: [],
   });
 }
