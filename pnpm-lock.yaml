@@ -6,7 +6,7 @@ specifiers:
   '@netlify/plugin-lighthouse': ^4.0.7
   '@netlify/plugin-nextjs': ^4.30.4
   '@prismicio/client': ^6.7.3
-  '@prismicio/react': ^2.5.1
+  '@prismicio/react': ^2.5.2
   '@tailwindcss/line-clamp': ^0.4.2
   '@testing-library/cypress': ^9.0.0
   '@types/cors': ^2.8.13
@@ -31,7 +31,7 @@ specifiers:
 dependencies:
   '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
   '@prismicio/client': 6.7.3
-  '@prismicio/react': 2.5.1_wrodp6pbc64pk2dl4m4urioxiu
+  '@prismicio/react': 2.5.2_wrodp6pbc64pk2dl4m4urioxiu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@waveshq/standard-defichain-jellyfishsdk': 0.43.1_@types+tar-fs@2.0.1
   '@waveshq/standard-web': 0.43.1_bnajf7fdzfzqzjxfekg2ii76nu
@@ -2087,8 +2087,8 @@ packages:
       imgix-url-builder: 0.0.3
     dev: false
 
-  /@prismicio/react/2.5.1_wrodp6pbc64pk2dl4m4urioxiu:
-    resolution: {integrity: sha512-gGF4UareQP1kdwtxNEbFyqWuFhQFqRjteMgsY7GxE0YKxKD3hByfUcKoFvSgkZIngk/boMpGRbRoE1S1Ouz2Jw==}
+  /@prismicio/react/2.5.2_wrodp6pbc64pk2dl4m4urioxiu:
+    resolution: {integrity: sha512-X00mT3/mHDnnb9NKUeAZnBWDDngXhr84RVzh9+eSeZjJKIVYEHHgfZqex4R6LgjZzeueaGp0UCLhwrUeiRp5DA==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       '@prismicio/client': ^6
