@@ -43,5 +43,10 @@
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.13.0",
     "cypress": "^12.5.1"
-  }
+  },
+  "engines": {
+    "node": "^18.0.0 || ^16.16.0",
+    "pnpm": ">=7.27.0"
+  },
+  "packageManager": "pnpm@7.27.1"
 }
