@@ -26,7 +26,7 @@ specifiers:
   prismic-reactjs: ^1.3.4
   react-icons: ^4.7.1
   react-schemaorg: ^2.0.0
-  schema-dts: ^1.1.0
+  schema-dts: ^1.1.2
 
 dependencies:
   '@headlessui/react': 1.7.11_biqbaboplfbrettd7655fr4n2y
@@ -44,8 +44,8 @@ dependencies:
   nextjs-progressbar: 0.0.16_next@13.1.6+react@18.2.0
   prismic-reactjs: 1.3.4_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
-  react-schemaorg: 2.0.0_fbbptd4yr5srky4tv3eva3cp5y
-  schema-dts: 1.1.0_typescript@4.9.5
+  react-schemaorg: 2.0.0_6bnps355to3xlx2exm773rfp4m
+  schema-dts: 1.1.2_typescript@4.9.5
 
 devDependencies:
   '@cypress/code-coverage': 3.10.0_bao4zmketlstf37bbssx5ee4n4
@@ -7550,7 +7550,7 @@ packages:
       shallow-equal: 1.2.1
     dev: false
 
-  /react-schemaorg/2.0.0_fbbptd4yr5srky4tv3eva3cp5y:
+  /react-schemaorg/2.0.0_6bnps355to3xlx2exm773rfp4m:
     resolution: {integrity: sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -7559,7 +7559,7 @@ packages:
       typescript: '>=3.1.6'
     dependencies:
       react: 18.2.0
-      schema-dts: 1.1.0_typescript@4.9.5
+      schema-dts: 1.1.2_typescript@4.9.5
       typescript: 4.9.5
     dev: false
 
@@ -7820,8 +7820,8 @@ packages:
     dependencies:
       loose-envify: 1.4.0
 
-  /schema-dts/1.1.0_typescript@4.9.5:
-    resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
+  /schema-dts/1.1.2_typescript@4.9.5:
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
     peerDependencies:
       typescript: '>=4.1.0'
     dependencies:
