@@ -30,10 +30,10 @@ export default async function handle(
   ];
 
   const MAINNET_LIMITS = [
-    { symbol: "USDT", id: "5", max: "10000" },
-    { symbol: "BTC", id: "1", max: "1" },
-    { symbol: "ETH", id: "2", max: "10" },
-    { symbol: "USDC", id: "22", max: "10000" },
+    { symbol: "USDT", id: "6", max: "10000" },
+    { symbol: "BTC", id: "2", max: "1" },
+    { symbol: "ETH", id: "1", max: "10" },
+    { symbol: "USDC", id: "13", max: "10000" },
   ];
 
   res.json({
