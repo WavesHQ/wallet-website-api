@@ -29,9 +29,16 @@ export default async function handle(
     { symbol: "USDC", id: "22", max: "2000" },
   ];
 
+  const MAINNET_LIMITS = [
+    { symbol: "USDT", id: "5", max: "10000" },
+    { symbol: "BTC", id: "1", max: "1" },
+    { symbol: "ETH", id: "2", max: "10" },
+    { symbol: "USDC", id: "22", max: "10000" },
+  ];
+
   res.json({
     DevNet: [],
-    MainNet: [],
+    MainNet: MAINNET_LIMITS,
     Playground: [],
     TestNet: TESTNET_LIMITS,
     [EnvironmentNetwork.LocalPlayground]: [],
