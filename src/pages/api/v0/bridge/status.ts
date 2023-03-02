@@ -8,7 +8,7 @@ export const cors = Cors({
 });
 
 type BridgeStatus = {
-  isUp: true;
+  isUp: boolean;
 };
 
 export default async function handle(
