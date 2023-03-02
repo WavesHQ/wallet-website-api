@@ -8,7 +8,7 @@ export const cors = Cors({
 });
 
 type BridgeStatus = {
-  isUp: true;
+  isUp: boolean;
 };
 
 export default async function handle(
@@ -17,6 +17,6 @@ export default async function handle(
 ): Promise<void> {
   await runMiddleware(req, res, cors);
   res.json({
-    isUp: true,
+    isUp: false,
   });
 }
