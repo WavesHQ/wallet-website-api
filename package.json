@@ -42,7 +42,7 @@
     "@types/cors": "^2.8.13",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.13.0",
-    "cypress": "^12.5.1"
+    "cypress": "^12.7.0"
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",

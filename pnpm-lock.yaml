@@ -19,7 +19,7 @@ specifiers:
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
   cors: ^2.8.5
-  cypress: ^12.5.1
+  cypress: ^12.7.0
   date-fns: ^2.29.3
   lodash: ^4.17.21
   nextjs-progressbar: ^0.0.16
@@ -48,15 +48,15 @@ dependencies:
   schema-dts: 1.1.0_typescript@4.9.5
 
 devDependencies:
-  '@cypress/code-coverage': 3.10.0_bao4zmketlstf37bbssx5ee4n4
+  '@cypress/code-coverage': 3.10.0_gsg6sg5ui676aacyajod72h5ge
   '@netlify/plugin-lighthouse': 4.0.7
   '@netlify/plugin-nextjs': 4.30.4
-  '@testing-library/cypress': 9.0.0_cypress@12.5.1
+  '@testing-library/cypress': 9.0.0_cypress@12.7.0
   '@types/cors': 2.8.13
   '@types/lodash': 4.14.191
   '@types/node': 18.13.0
   '@waveshq/standard-web-linter': 0.43.1_welo7wvizfb27iumkgoncycpce
-  cypress: 12.5.1
+  cypress: 12.7.0
 
 packages:
 
@@ -1205,14 +1205,14 @@ packages:
     resolution: {integrity: sha512-PX90bEnrLdxd5e6rSFWsghExMuSw0Uov3fWJuuaoFuUQIS/446diu/4seExK5b+43L+SOBbd2uBGwYUkG1JfCw==}
     dev: false
 
-  /@cypress/code-coverage/3.10.0_bao4zmketlstf37bbssx5ee4n4:
+  /@cypress/code-coverage/3.10.0_gsg6sg5ui676aacyajod72h5ge:
     resolution: {integrity: sha512-K5pW2KPpK4vKMXqxd6vuzo6m9BNgpAv1LcrrtmqAtOJ1RGoEILXYZVost0L6Q+V01NyY7n7jXIIfS7LR3nP6YA==}
     peerDependencies:
       cypress: '*'
     dependencies:
       '@cypress/webpack-preprocessor': 5.16.3_jefi3vcapkwufolupgjd3y6ulq
       chalk: 4.1.2
-      cypress: 12.5.1
+      cypress: 12.7.0
       dayjs: 1.10.7
       debug: 4.3.4
       execa: 4.1.0
@@ -2210,7 +2210,7 @@ packages:
       tailwindcss: 3.2.4_postcss@8.4.21
     dev: false
 
-  /@testing-library/cypress/9.0.0_cypress@12.5.1:
+  /@testing-library/cypress/9.0.0_cypress@12.7.0:
     resolution: {integrity: sha512-c1XiCGeHGGTWn0LAU12sFUfoX3qfId5gcSE2yHode+vsyHDWraxDPALjVnHd4/Fa3j4KBcc5k++Ccy6A9qnkMA==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -2218,7 +2218,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.13
       '@testing-library/dom': 8.20.0
-      cypress: 12.5.1
+      cypress: 12.7.0
     dev: true
 
   /@testing-library/dom/8.20.0:
@@ -3863,8 +3863,8 @@ packages:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: false
 
-  /cypress/12.5.1:
-    resolution: {integrity: sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ==}
+  /cypress/12.7.0:
+    resolution: {integrity: sha512-7rq+nmhzz0u6yabCFyPtADU2OOrYt6pvUau9qV7xyifJ/hnsaw/vkr0tnLlcuuQKUAOC1v1M1e4Z0zG7S0IAvA==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
