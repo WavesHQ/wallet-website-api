@@ -17,6 +17,6 @@ export default async function handle(
 ): Promise<void> {
   await runMiddleware(req, res, cors);
   res.json({
-    isUp: true,
+    isUp: false,
   });
 }
