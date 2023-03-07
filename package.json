@@ -21,7 +21,7 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@waveshq/standard-defichain-jellyfishsdk": "^0.44.3",
     "@waveshq/standard-web": "^0.44.3",
-    "@waveshq/walletkit-core": "^0.39.0",
+    "@waveshq/walletkit-core": "^0.40.0",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
