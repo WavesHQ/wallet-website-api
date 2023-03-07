@@ -38,7 +38,7 @@
     "@testing-library/cypress": "^9.0.0",
     "@waveshq/standard-web-linter": "^0.44.3",
     "@netlify/plugin-lighthouse": "^4.0.7",
-    "@netlify/plugin-nextjs": "^4.30.4",
+    "@netlify/plugin-nextjs": "^4.31.0",
     "@types/cors": "^2.8.13",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.13.0",
