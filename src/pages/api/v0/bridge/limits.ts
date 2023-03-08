@@ -27,13 +27,15 @@ export default async function handle(
     { symbol: "BTC", id: "1", max: "5000" },
     { symbol: "ETH", id: "2", max: "5000" },
     { symbol: "USDC", id: "22", max: "2000" },
+    { symbol: "EUROC", id: "216", max: "150000" },
   ];
 
   const MAINNET_LIMITS = [
-    { symbol: "USDT", id: "3", max: "10000" },
-    { symbol: "BTC", id: "2", max: "2" },
-    { symbol: "ETH", id: "1", max: "15" },
-    { symbol: "USDC", id: "13", max: "10000" },
+    { symbol: "USDT", id: "3", max: "150000" },
+    { symbol: "BTC", id: "2", max: "15" },
+    { symbol: "ETH", id: "1", max: "70" },
+    { symbol: "USDC", id: "13", max: "150000" },
+    { symbol: "EUROC", id: "216", max: "150000" },
   ];
 
   res.json({
