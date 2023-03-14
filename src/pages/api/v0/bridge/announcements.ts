@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
 import { runMiddleware } from "../../../../utils/middleware";
 
-interface AnnouncementData {
+interface BridgeAnnouncement {
   lang: {
     en: string;
   };
@@ -16,7 +16,7 @@ export const cors = Cors({
 
 export default async function handle(
   req: NextApiRequest,
-  res: NextApiResponse<AnnouncementData[]>
+  res: NextApiResponse<BridgeAnnouncement[]>
 ): Promise<void> {
   await runMiddleware(req, res, cors);
   res.json([
