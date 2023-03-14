@@ -24,7 +24,9 @@ export default async function handler(
 
   const pairWithFees = pairs.filter((pair) => {
     return (
-      pair.data.displaySymbol.includes("DUSD") && tokenADisplaySymbol === "DUSD"
+      pair.data.displaySymbol.includes("DUSD") &&
+      pair.data.displaySymbol.includes(tokenBDisplaySymbol) &&
+      tokenADisplaySymbol === "DUSD"
     );
   });
 
