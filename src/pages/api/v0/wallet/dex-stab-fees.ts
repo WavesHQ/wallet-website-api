@@ -19,7 +19,6 @@ export default async function handler(
   await runMiddleware(req, res, cors);
   const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.body;
 
-  let fee;
   const oceanOptions = newOceanOptions(network);
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
   const poolpairs = await whaleApiClient.poolpairs.list(200);
@@ -31,6 +30,7 @@ export default async function handler(
       tokenADisplaySymbol === "DUSD"
   );
 
+  let fee;
   if (pairWithFees.length === 0) {
     fee = "0";
   } else {
