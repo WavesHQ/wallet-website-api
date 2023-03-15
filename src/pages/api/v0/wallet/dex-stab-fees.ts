@@ -1,5 +1,6 @@
 import BigNumber from "bignumber.js";
 import { NextApiRequest, NextApiResponse } from "next";
+import { newOceanOptions, newWhaleAPIClient } from "@waveshq/walletkit-core";
 import Cors from "cors";
 import { runMiddleware } from "../../../../utils/middleware";
 
@@ -8,7 +9,7 @@ type Fees = {
 };
 
 export const cors = Cors({
-  methods: ["POST"],
+  methods: ["GET", "HEAD"],
 });
 
 export default async function handler(
@@ -16,16 +17,17 @@ export default async function handler(
   res: NextApiResponse<Fees>
 ) {
   await runMiddleware(req, res, cors);
-  const { tokenADisplaySymbol, tokenBDisplaySymbol, pairs } = JSON.parse(
-    req.body
-  );
+  const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.body;
 
   let fee;
+  const oceanOptions = newOceanOptions(network);
+  const whaleApiClient = newWhaleAPIClient(oceanOptions);
+  const poolpairs = await whaleApiClient.poolpairs.list(200);
 
-  const pairWithFees = pairs.filter((pair) => {
+  const pairWithFees = poolpairs.filter((pair) => {
     return (
-      pair.data.displaySymbol.includes("DUSD") &&
-      pair.data.displaySymbol.includes(tokenBDisplaySymbol) &&
+      pair.displaySymbol.includes("DUSD") &&
+      pair.displaySymbol.includes(tokenBDisplaySymbol) &&
       tokenADisplaySymbol === "DUSD"
     );
   });
@@ -33,9 +35,9 @@ export default async function handler(
   if (pairWithFees.length === 0) {
     fee = "0";
   } else {
-    fee = pairWithFees[0].data.tokenB.fee
-      ? pairWithFees[0].data.tokenB.fee?.pct
-      : pairWithFees[0].data.tokenA.fee?.pct;
+    fee = pairWithFees[0].tokenB.fee
+      ? pairWithFees[0].tokenB.fee?.pct
+      : pairWithFees[0].tokenA.fee?.pct;
   }
 
   res.send(fee === "0" ? fee : new BigNumber(fee).multipliedBy(100).toFixed(2));
