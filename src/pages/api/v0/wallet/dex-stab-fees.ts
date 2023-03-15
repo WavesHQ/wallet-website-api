@@ -39,8 +39,8 @@ export default async function handler(
 
   const pairWithDUSD = poolpairs.filter(
     (pair) =>
-      pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
       pair.tokenA.displaySymbol === tokenADisplaySymbol &&
+      pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
       (pair.tokenA.displaySymbol === "DUSD" ||
         pair.tokenB.displaySymbol === "DUSD")
   );
@@ -48,8 +48,8 @@ export default async function handler(
   let fee;
   if (
     pairWithDUSD.length === 0 ||
-    (pairWithDUSD[0].tokenB.fee === undefined &&
-      pairWithDUSD[0].tokenA.fee === undefined)
+    (pairWithDUSD[0].tokenA.fee === undefined &&
+      pairWithDUSD[0].tokenB.fee === undefined)
   ) {
     fee = "0";
   } else {
