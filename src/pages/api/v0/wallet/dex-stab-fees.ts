@@ -19,7 +19,7 @@ type DexStabFeeRequestBody = {
 };
 
 interface DexStabRequest extends NextApiRequest {
-  body: DexStabFeeRequestBody;
+  query: DexStabFeeRequestBody;
 }
 
 export const cors = Cors({
@@ -31,7 +31,7 @@ export default async function handler(
   res: NextApiResponse<Fees>
 ) {
   await runMiddleware(req, res, cors);
-  const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.body;
+  const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.query;
 
   const oceanOptions = newOceanOptions(network);
   const whaleApiClient = newWhaleAPIClient(oceanOptions);

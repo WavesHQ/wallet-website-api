@@ -1,19 +1,34 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // @ts-ignore
 import Cors from "cors";
-import { newOceanOptions, newWhaleAPIClient } from "@waveshq/walletkit-core";
+import {
+  EnvironmentNetwork,
+  newOceanOptions,
+  newWhaleAPIClient,
+} from "@waveshq/walletkit-core";
 import { runMiddleware } from "../../../../utils/middleware";
+import BigNumber from "bignumber.js";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
+type BestPathPair = {
+  tokenADisplaySymbol: string;
+  tokenBDisplaySymbol: string;
+  network: EnvironmentNetwork;
+};
+
+interface BestPathPairRequest extends NextApiRequest {
+  query: BestPathPair;
+}
+
 export default async function handle(
-  req: NextApiRequest,
+  req: BestPathPairRequest,
   res: NextApiResponse
 ): Promise<void> {
   await runMiddleware(req, res, cors);
-  const { network } = req.body;
+  const { network } = req.query;
 
   const oceanOptions = newOceanOptions(network);
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
@@ -23,7 +38,9 @@ export default async function handle(
     (pair) =>
       (pair.tokenA.displaySymbol === "DUSD" ||
         pair.tokenB.displaySymbol === "DUSD") &&
-      (pair.tokenA.fee !== undefined || pair.tokenB.fee !== undefined)
+      (pair.tokenA.fee !== undefined || pair.tokenB.fee !== undefined) &&
+      (new BigNumber(pair.tokenA.fee?.pct ?? 0).isGreaterThan(0.01) ||
+        new BigNumber(pair.tokenB.fee?.pct ?? 0).isGreaterThan(0.01))
   );
 
   interface IBestPath {
