@@ -24,13 +24,12 @@ export default async function handler(
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
   const poolpairs = await whaleApiClient.poolpairs.list(200);
 
-  const pairWithFees = poolpairs.filter((pair) => {
-    return (
+  const pairWithFees = poolpairs.filter(
+    (pair) =>
       pair.displaySymbol.includes("DUSD") &&
       pair.displaySymbol.includes(tokenBDisplaySymbol) &&
       tokenADisplaySymbol === "DUSD"
-    );
-  });
+  );
 
   if (pairWithFees.length === 0) {
     fee = "0";
