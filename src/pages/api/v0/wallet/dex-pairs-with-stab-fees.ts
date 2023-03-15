@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // @ts-ignore
 import Cors from "cors";
-import { runMiddleware } from "../../../utils/middleware";
+import { runMiddleware } from "../../../../utils/middleware";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],

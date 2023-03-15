@@ -100,7 +100,7 @@ describe("Wallet - Dex Stabilisation Fee", () => {
 
     cy.request(
       "POST",
-      "/api/wallet/dex-stab-fees",
+      "/api/v0/wallet/dex-stab-fees",
       JSON.stringify({
         tokenADisplaySymbol: "DUSD",
         tokenBDisplaySymbol: "DFI",

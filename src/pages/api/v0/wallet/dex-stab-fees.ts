@@ -1,7 +1,7 @@
 import BigNumber from "bignumber.js";
 import { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
-import { runMiddleware } from "../../../utils/middleware";
+import { runMiddleware } from "../../../../utils/middleware";
 
 type Fees = {
   fee: string | BigNumber;
