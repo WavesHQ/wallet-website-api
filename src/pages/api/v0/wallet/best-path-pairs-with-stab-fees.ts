@@ -6,8 +6,8 @@ import {
   newOceanOptions,
   newWhaleAPIClient,
 } from "@waveshq/walletkit-core";
-import { runMiddleware } from "../../../../utils/middleware";
 import BigNumber from "bignumber.js";
+import { runMiddleware } from "../../../../utils/middleware";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
