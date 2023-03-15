@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // @ts-ignore
 import Cors from "cors";
-import { runMiddleware } from "../../../../utils/middleware";
 import { newOceanOptions, newWhaleAPIClient } from "@waveshq/walletkit-core";
+import { runMiddleware } from "../../../../utils/middleware";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
@@ -34,9 +34,9 @@ export default async function handle(
   const bestPathPairs: IBestPath[] = [];
 
   // this is to set DUSD as token A for the bestPath mapping
-  for (let i = 0; i < pairsWithFees.length; i++) {
-    let pair = pairsWithFees[i];
-    let bestPathPair = {
+  for (let i = 0; i < pairsWithFees.length; i += 1) {
+    const pair = pairsWithFees[i];
+    const bestPathPair = {
       tokenADisplaySymbol: "",
       tokenBDisplaySymbol: "",
     };
