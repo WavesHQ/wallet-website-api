@@ -12,14 +12,14 @@ type Fees = {
   fee: string | BigNumber;
 };
 
-type dexStabFeeRequestBody = {
+type DexStabFeeRequestBody = {
   tokenADisplaySymbol: string;
   tokenBDisplaySymbol: string;
   network: EnvironmentNetwork;
 };
 
 interface DexStabRequest extends NextApiRequest {
-  body: dexStabFeeRequestBody;
+  body: DexStabFeeRequestBody;
 }
 
 export const cors = Cors({
@@ -37,8 +37,6 @@ export default async function handler(
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
   const poolpairs = await whaleApiClient.poolpairs.list(200);
 
-  console.log(poolpairs);
-
   const pairWithDUSD = poolpairs.filter(
     (pair) =>
       pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
@@ -50,7 +48,7 @@ export default async function handler(
   let fee;
   if (
     pairWithDUSD.length === 0 ||
-    (pairWithDUSD[0].tokenB.fee == undefined &&
+    (pairWithDUSD[0].tokenB.fee === undefined &&
       pairWithDUSD[0].tokenA.fee === undefined)
   ) {
     fee = "0";
