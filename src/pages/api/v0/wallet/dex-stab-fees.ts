@@ -37,11 +37,14 @@ export default async function handler(
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
   const poolpairs = await whaleApiClient.poolpairs.list(200);
 
+  console.log(poolpairs);
+
   const pairWithDUSD = poolpairs.filter(
     (pair) =>
-      pair.displaySymbol.includes("DUSD") &&
-      pair.displaySymbol.includes(tokenBDisplaySymbol) &&
-      tokenADisplaySymbol === "DUSD"
+      pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
+      pair.tokenA.displaySymbol === tokenADisplaySymbol &&
+      (pair.tokenA.displaySymbol === "DUSD" ||
+        pair.tokenB.displaySymbol === "DUSD")
   );
 
   let fee;
