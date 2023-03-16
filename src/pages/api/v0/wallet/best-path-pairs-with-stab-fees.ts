@@ -1,13 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // @ts-ignore
 import Cors from "cors";
-import {
-  EnvironmentNetwork,
-  newOceanOptions,
-  newWhaleAPIClient,
-} from "@waveshq/walletkit-core";
-import BigNumber from "bignumber.js";
+import { EnvironmentNetwork } from "@waveshq/walletkit-core";
 import { runMiddleware } from "../../../../utils/middleware";
+import {
+  getAllPoolpairs,
+  getPoolpairsWithStabilizationFee,
+  PoolPairData,
+} from "./poolpairs.utils";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
@@ -40,31 +40,16 @@ export default async function handle(
   const { network } = req.query;
 
   try {
-    const oceanOptions = newOceanOptions(network);
-    const whaleApiClient = newWhaleAPIClient(oceanOptions);
-    const poolpairs = await whaleApiClient.poolpairs.list(200);
-
-    // Logic for filter would be to
-    // check if either tokenA or tokenB is `DUSD`
-    // check if there is any fee for tokenA or tokenB
-    // check for if the fee is > 0.001 as DEX stabilization fees are more than 0.001 (0.1%)
-    const pairsWithFees = poolpairs.filter(
-      (pair) =>
-        (pair.tokenA.displaySymbol === "DUSD" ||
-          pair.tokenB.displaySymbol === "DUSD") &&
-        (pair.tokenA.fee !== undefined || pair.tokenB.fee !== undefined) &&
-        (new BigNumber(pair.tokenA.fee?.pct ?? 0).isGreaterThan(0.001) ||
-          new BigNumber(pair.tokenB.fee?.pct ?? 0).isGreaterThan(0.001))
-    );
+    const poolpairs: PoolPairData[] = await getAllPoolpairs(network);
+    const poolpairsWithStabFee = getPoolpairsWithStabilizationFee(poolpairs);
 
     const bestPathPairs: IBestPath[] = [];
-
-    // this is to set DUSD as token A for the bestPath mapping
-    pairsWithFees.forEach((pair) => {
+    poolpairsWithStabFee.forEach((pair) => {
       const bestPathPair = {
         tokenADisplaySymbol: "",
         tokenBDisplaySymbol: "",
       };
+      // this is to set DUSD as token A for the bestPath mapping
       if (pair.tokenA.displaySymbol === "DUSD") {
         bestPathPair.tokenADisplaySymbol = pair.tokenA.displaySymbol;
         bestPathPair.tokenBDisplaySymbol = pair.tokenB.displaySymbol;
