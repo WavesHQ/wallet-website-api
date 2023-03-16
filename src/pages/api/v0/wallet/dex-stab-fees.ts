@@ -68,8 +68,8 @@ export default async function handler(
       fee = new BigNumber(tokenfee ?? 0).multipliedBy(100).toFixed(2);
     }
 
-    res.send({ fee });
+    return res.send({ fee });
   } catch (error) {
-    res.status(500).send({ error: error.message });
+    return res.status(500).send({ error: error.message });
   }
 }
