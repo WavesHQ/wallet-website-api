@@ -1,7 +1,7 @@
 describe("Wallet - Dex Stabilisation Fee", () => {
   it("should be able to return actual data", () => {
     cy.request({
-      method: "Post",
+      method: "GET",
       url: "/api/v0/wallet/dex-stab-fees",
       qs: {
         tokenDisplaySymbolA: "DUSD",
