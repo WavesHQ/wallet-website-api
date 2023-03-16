@@ -38,7 +38,7 @@ export default async function handle(
     // Logic for filter would be to
     // check if either tokenA or tokenB is `DUSD`
     // check if there is any fee for tokenA or tokenB
-    // check for if the fee is > 0.01 as DEX stabilization fees are more than 0.001 (0.1%)
+    // check for if the fee is > 0.001 as DEX stabilization fees are more than 0.001 (0.1%)
     const pairsWithFees = poolpairs.filter(
       (pair) =>
         (pair.tokenA.displaySymbol === "DUSD" ||
