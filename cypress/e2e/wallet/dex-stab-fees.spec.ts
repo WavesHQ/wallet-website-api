@@ -4,8 +4,8 @@ describe("Wallet - Dex Stabilisation Fee", () => {
       method: "Post",
       url: "/api/v0/wallet/dex-stab-fees",
       qs: {
-        tokenADisplaySymbol: "DUSD",
-        tokenBDisplaySymbol: "DFI",
+        tokenDisplaySymbolA: "DUSD",
+        tokenDisplaySymbolB: "DFI",
         network: "TestNet",
       },
     }).then((resp) => {
