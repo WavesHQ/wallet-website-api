@@ -5,10 +5,10 @@ describe("Wallet - Dex Stabilisation Fee", () => {
     }).then((resp) => {
       expect(resp.status).to.eq(200);
       expect(resp.body).to.deep.equal([
-        { tokenDisplaySymbolA: "DUSD", tokenDisplaySymbolB: "DFI" },
-        { tokenDisplaySymbolA: "DUSD", tokenDisplaySymbolB: "dUSDT" },
-        { tokenDisplaySymbolA: "DUSD", tokenDisplaySymbolB: "dUSDC" },
-        { tokenDisplaySymbolA: "DUSD", tokenDisplaySymbolB: "dEUROC" },
+        { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "DFI" },
+        { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "dUSDT" },
+        { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "dUSDC" },
+        { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "dEUROC" },
       ]);
       // TODO: Check if we can mock our own poolpair
     });

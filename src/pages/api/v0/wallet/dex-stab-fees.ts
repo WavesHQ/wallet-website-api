@@ -17,8 +17,8 @@ type Error = {
 };
 
 type DexStabFeeRequestBody = {
-  tokenDisplaySymbolA: string;
-  tokenDisplaySymbolB: string;
+  tokenADisplaySymbol: string;
+  tokenBDisplaySymbol: string;
   network: EnvironmentNetwork;
 };
 
@@ -35,11 +35,11 @@ export default async function handler(
   res: NextApiResponse<Fees | Error>
 ) {
   await runMiddleware(req, res, cors);
-  const { tokenDisplaySymbolA, tokenDisplaySymbolB, network } = req.query;
+  const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.query;
 
-  if (!(tokenDisplaySymbolA && tokenDisplaySymbolB)) {
+  if (!(tokenADisplaySymbol && tokenBDisplaySymbol)) {
     return res.status(400).send({
-      error: "Required fields: tokenDisplaySymbolA, tokenDisplaySymbolB",
+      error: "Required fields: tokenADisplaySymbol, tokenBDisplaySymbol",
     });
   }
 
@@ -51,8 +51,8 @@ export default async function handler(
 
     const filteredTokenPairWithDUSD = poolpairs.filter(
       (pair) =>
-        pair.tokenA.displaySymbol === tokenDisplaySymbolA &&
-        pair.tokenB.displaySymbol === tokenDisplaySymbolB &&
+        pair.tokenA.displaySymbol === tokenADisplaySymbol &&
+        pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
         (pair.tokenA.displaySymbol === "DUSD" ||
           pair.tokenB.displaySymbol === "DUSD")
     );

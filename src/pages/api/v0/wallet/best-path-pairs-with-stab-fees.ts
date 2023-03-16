@@ -14,8 +14,8 @@ export const cors = Cors({
 });
 
 type BestPathPair = {
-  tokenDisplaySymbolA: string;
-  tokenDisplaySymbolB: string;
+  tokenADisplaySymbol: string;
+  tokenBDisplaySymbol: string;
   network: EnvironmentNetwork;
 };
 
@@ -24,8 +24,8 @@ type Error = {
 };
 
 type IBestPath = {
-  tokenDisplaySymbolA: string;
-  tokenDisplaySymbolB: string;
+  tokenADisplaySymbol: string;
+  tokenBDisplaySymbol: string;
 };
 
 interface BestPathPairRequest extends NextApiRequest {
@@ -62,15 +62,15 @@ export default async function handle(
     // this is to set DUSD as token A for the bestPath mapping
     pairsWithFees.forEach((pair) => {
       const bestPathPair = {
-        tokenDisplaySymbolA: "",
-        tokenDisplaySymbolB: "",
+        tokenADisplaySymbol: "",
+        tokenBDisplaySymbol: "",
       };
       if (pair.tokenA.displaySymbol === "DUSD") {
-        bestPathPair.tokenDisplaySymbolA = pair.tokenA.displaySymbol;
-        bestPathPair.tokenDisplaySymbolB = pair.tokenB.displaySymbol;
+        bestPathPair.tokenADisplaySymbol = pair.tokenA.displaySymbol;
+        bestPathPair.tokenBDisplaySymbol = pair.tokenB.displaySymbol;
       } else {
-        bestPathPair.tokenDisplaySymbolA = pair.tokenB.displaySymbol;
-        bestPathPair.tokenDisplaySymbolB = pair.tokenA.displaySymbol;
+        bestPathPair.tokenADisplaySymbol = pair.tokenB.displaySymbol;
+        bestPathPair.tokenBDisplaySymbol = pair.tokenA.displaySymbol;
       }
       bestPathPairs.push(bestPathPair);
     });
