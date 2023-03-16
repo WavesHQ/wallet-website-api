@@ -12,9 +12,13 @@ type Fees = {
   fee: string | BigNumber;
 };
 
+type Error = {
+  error: string;
+};
+
 type DexStabFeeRequestBody = {
-  tokenADisplaySymbol: string;
-  tokenBDisplaySymbol: string;
+  tokenDisplaySymbolA: string;
+  tokenDisplaySymbolB: string;
   network: EnvironmentNetwork;
 };
 
@@ -28,12 +32,18 @@ export const cors = Cors({
 
 export default async function handler(
   req: DexStabRequest,
-  res: NextApiResponse<Fees>
+  res: NextApiResponse<Fees | Error>
 ) {
   await runMiddleware(req, res, cors);
-  const { tokenADisplaySymbol, tokenBDisplaySymbol, network } = req.query;
+  const { tokenDisplaySymbolA, tokenDisplaySymbolB, network } = req.query;
 
-  let fee;
+  if (!(tokenDisplaySymbolA && tokenDisplaySymbolB)) {
+    return res.status(400).send({
+      error: "Required fields: tokenDisplaySymbolA, tokenDisplaySymbolB",
+    });
+  }
+
+  let fee: string | BigNumber = "0";
   try {
     const oceanOptions = newOceanOptions(network);
     const whaleApiClient = newWhaleAPIClient(oceanOptions);
@@ -41,30 +51,25 @@ export default async function handler(
 
     const filteredTokenPairWithDUSD = poolpairs.filter(
       (pair) =>
-        pair.tokenA.displaySymbol === tokenADisplaySymbol &&
-        pair.tokenB.displaySymbol === tokenBDisplaySymbol &&
+        pair.tokenA.displaySymbol === tokenDisplaySymbolA &&
+        pair.tokenB.displaySymbol === tokenDisplaySymbolB &&
         (pair.tokenA.displaySymbol === "DUSD" ||
           pair.tokenB.displaySymbol === "DUSD")
     );
 
     if (
-      filteredTokenPairWithDUSD.length === 0 ||
-      (filteredTokenPairWithDUSD[0].tokenA.fee === undefined &&
-        filteredTokenPairWithDUSD[0].tokenB.fee === undefined)
+      filteredTokenPairWithDUSD.length > 0 &&
+      (filteredTokenPairWithDUSD[0].tokenA.fee?.pct !== undefined ||
+        filteredTokenPairWithDUSD[0].tokenB.fee?.pct !== undefined)
     ) {
-      fee = "0";
-    } else {
-      fee = filteredTokenPairWithDUSD[0].tokenB.fee
+      const tokenfee = filteredTokenPairWithDUSD[0].tokenB.fee
         ? filteredTokenPairWithDUSD[0].tokenB.fee?.pct
         : filteredTokenPairWithDUSD[0].tokenA.fee?.pct;
+      fee = new BigNumber(tokenfee ?? 0).multipliedBy(100).toFixed(2);
     }
 
-    res.send(
-      fee === "0" ? fee : new BigNumber(fee).multipliedBy(100).toFixed(2)
-    );
+    res.send({ fee });
   } catch (error) {
-    console.log(error);
-    fee = "0";
-    res.send(fee);
+    res.status(500).send({ error: error.message });
   }
 }

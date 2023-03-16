@@ -10,7 +10,7 @@ describe("Wallet - Dex Stabilisation Fee", () => {
       },
     }).then((resp) => {
       expect(resp.status).to.eq(200);
-      expect(resp.body).to.deep.equal("5.00");
+      expect(resp.body).to.deep.equal({ fee: "5.00" });
     });
   });
 });

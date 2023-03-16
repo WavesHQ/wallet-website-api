@@ -19,13 +19,22 @@ type BestPathPair = {
   network: EnvironmentNetwork;
 };
 
+type Error = {
+  error: string;
+};
+
+type IBestPath = {
+  tokenADisplaySymbol: string;
+  tokenBDisplaySymbol: string;
+};
+
 interface BestPathPairRequest extends NextApiRequest {
   query: BestPathPair;
 }
 
 export default async function handle(
   req: BestPathPairRequest,
-  res: NextApiResponse
+  res: NextApiResponse<IBestPath[] | Error>
 ): Promise<void> {
   await runMiddleware(req, res, cors);
   const { network } = req.query;
@@ -48,11 +57,6 @@ export default async function handle(
           new BigNumber(pair.tokenB.fee?.pct ?? 0).isGreaterThan(0.001))
     );
 
-    interface IBestPath {
-      tokenADisplaySymbol: string;
-      tokenBDisplaySymbol: string;
-    }
-
     const bestPathPairs: IBestPath[] = [];
 
     // this is to set DUSD as token A for the bestPath mapping
@@ -73,7 +77,6 @@ export default async function handle(
 
     res.json(bestPathPairs);
   } catch (error) {
-    console.log(error);
-    res.json([]);
+    res.status(500).send({ error: error.message });
   }
 }

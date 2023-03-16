@@ -10,6 +10,7 @@ describe("Wallet - Dex Stabilisation Fee", () => {
         { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "dUSDC" },
         { tokenADisplaySymbol: "DUSD", tokenBDisplaySymbol: "dEUROC" },
       ]);
+      // TODO: Check if we can mock our own poolpair
     });
   });
 });
