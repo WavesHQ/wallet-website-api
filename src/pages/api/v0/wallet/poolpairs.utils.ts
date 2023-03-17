@@ -44,6 +44,7 @@ async function getAllPoolpairs(
   const oceanOptions = newOceanOptions(network);
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
   do {
+    // eslint-disable-next-line no-await-in-loop
     const poolpairs = await whaleApiClient.poolpairs.list(10, next);
     allPoolpairs.push(...poolpairs);
     hasNext = poolpairs.hasNext;
