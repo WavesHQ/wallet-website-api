@@ -44,7 +44,7 @@ export default async function handler(
     });
   }
 
-  let fee: string | BigNumber = "0";
+  let fee: string = "0";
   try {
     const poolpairs: PoolPairData[] = await getAllPoolpairs(network);
     const poolpairsWithStabFee = getPoolpairsWithStabilizationFee(poolpairs);
