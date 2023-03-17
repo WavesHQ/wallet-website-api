@@ -58,11 +58,12 @@ export default async function handler(
     );
     if (
       requestedPoolpair &&
-      (requestedPoolpair.tokenA.fee?.pct || requestedPoolpair.tokenB.fee?.pct)
+      (requestedPoolpair.tokenA.fee?.inPct ||
+        requestedPoolpair.tokenB.fee?.inPct)
     ) {
       const tokenfee = requestedPoolpair.tokenB.fee
-        ? requestedPoolpair.tokenB.fee?.pct
-        : requestedPoolpair.tokenA.fee?.pct;
+        ? requestedPoolpair.tokenB.fee?.inPct
+        : requestedPoolpair.tokenA.fee?.inPct;
       fee = new BigNumber(tokenfee ?? 0).multipliedBy(100).toFixed(2);
     }
 
