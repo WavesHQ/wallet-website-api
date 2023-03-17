@@ -61,16 +61,14 @@ async function getAllPoolpairs(
 function getPoolpairsWithStabilizationFee(poolpairs: PoolPairData[]) {
   /**
    * Logic for filter would be to:
-   * - check if either tokenA or tokenB is `DUSD`
-   * - check if there is any fee for tokenA or tokenB
+   * - check if there is `inPct` fee for tokenA or tokenB
    * - check if the fee inPct is > 0.001 as DEX stabilization fees are more than 0.001 (0.1%)
    */
   return poolpairs.filter(
     (pair) =>
-      (pair.tokenA.displaySymbol === "DUSD" ||
-        pair.tokenB.displaySymbol === "DUSD") &&
-      (pair.tokenA.fee !== undefined || pair.tokenB.fee !== undefined) &&
-      (new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(0.001) ||
+      (pair.tokenA.fee?.inPct !== undefined &&
+        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(0.001)) ||
+      (pair.tokenB.fee?.inPct !== undefined &&
         new BigNumber(pair.tokenB.fee?.inPct ?? 0).isGreaterThan(0.001))
   );
 }
