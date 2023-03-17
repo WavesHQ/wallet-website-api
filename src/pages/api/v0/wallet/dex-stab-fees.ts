@@ -10,7 +10,7 @@ import {
 } from "./poolpairs.utils";
 
 type Fees = {
-  fee: string | BigNumber;
+  fee: string;
 };
 
 type Error = {
