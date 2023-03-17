@@ -29,22 +29,34 @@ export interface PoolPairData {
   tokenB: Token;
 }
 
+/**
+ * Recursively get all poolpairs
+ * @param network
+ * @returns allPoolpairs
+ */
 async function getAllPoolpairs(
-  network: EnvironmentNetwork,
-  poolpairs: PoolPairData[] = [],
-  next: string | undefined = undefined,
-  hasNext = true
+  network: EnvironmentNetwork
 ): Promise<PoolPairData[]> {
+  const allPoolpairs: PoolPairData[] = [];
+  let hasNext = false;
+  let next;
+
   const oceanOptions = newOceanOptions(network);
   const whaleApiClient = newWhaleAPIClient(oceanOptions);
-  if (hasNext) {
-    const fetchPoolpairs = await whaleApiClient.poolpairs.list(200, next);
-    const { nextToken, hasNext: hasNextToken } = fetchPoolpairs;
-    return getAllPoolpairs(network, fetchPoolpairs, nextToken, hasNextToken);
-  }
-  return poolpairs;
+  do {
+    const poolpairs = await whaleApiClient.poolpairs.list(10, next);
+    allPoolpairs.push(...poolpairs);
+    hasNext = poolpairs.hasNext;
+    next = poolpairs.nextToken;
+  } while (hasNext);
+  return allPoolpairs;
 }
 
+/**
+ * Filters poolpairs with DEX stabilization fee
+ * @param poolpairs
+ * @returns poolpairsWithStabFee
+ */
 function getPoolpairsWithStabilizationFee(poolpairs: PoolPairData[]) {
   /**
    * Logic for filter would be to:
