@@ -5,6 +5,7 @@ import Cors from "cors";
 import { EnvironmentNetwork } from "@waveshq/walletkit-core";
 import { runMiddleware } from "../../../../utils/middleware";
 import {
+  FEE_PCT,
   getAllPoolpairs,
   getPoolpairsWithStabilizationFee,
   PoolPairData,
@@ -45,8 +46,8 @@ export default async function handle(
       let tokenADisplaySymbol = "";
       let tokenBDisplaySymbol = "";
 
-      /* Set DUSD as tokenA - so that tokenA is always `DUSD` */
-      if (pair.tokenA.displaySymbol === "DUSD") {
+      /* Set token with `inPct` to be the tokenA */
+      if (new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(FEE_PCT)) {
         tokenADisplaySymbol = pair.tokenA.displaySymbol;
         tokenBDisplaySymbol = pair.tokenB.displaySymbol;
       } else {

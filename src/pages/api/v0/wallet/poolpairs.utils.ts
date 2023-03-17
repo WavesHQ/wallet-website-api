@@ -34,9 +34,9 @@ export interface PoolPairData {
  * @param network
  * @returns allPoolpairs
  */
-async function getAllPoolpairs(
+export const getAllPoolpairs = async (
   network: EnvironmentNetwork
-): Promise<PoolPairData[]> {
+): Promise<PoolPairData[]> => {
   const allPoolpairs: PoolPairData[] = [];
   let hasNext = false;
   let next;
@@ -51,26 +51,27 @@ async function getAllPoolpairs(
     next = poolpairs.nextToken;
   } while (hasNext);
   return allPoolpairs;
-}
+};
 
 /**
  * Filters poolpairs with DEX stabilization fee
  * @param poolpairs
  * @returns poolpairsWithStabFee
+ *
+ * Logic for filter would be to:
+ * - check if there is `inPct` fee for tokenA or tokenB
+ * - check if the fee inPct is > 0.001 as DEX stabilization fees are more than 0.001 (0.1%)
  */
-function getPoolpairsWithStabilizationFee(poolpairs: PoolPairData[]) {
-  /**
-   * Logic for filter would be to:
-   * - check if there is `inPct` fee for tokenA or tokenB
-   * - check if the fee inPct is > 0.001 as DEX stabilization fees are more than 0.001 (0.1%)
-   */
-  return poolpairs.filter(
+export const getPoolpairsWithStabilizationFee = (poolpairs: PoolPairData[]) => {
+  const poolpairsWithStabFee = poolpairs.filter(
     (pair) =>
       (pair.tokenA.fee?.inPct !== undefined &&
-        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(0.001)) ||
+        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(FEE_PCT)) ||
       (pair.tokenB.fee?.inPct !== undefined &&
-        new BigNumber(pair.tokenB.fee?.inPct ?? 0).isGreaterThan(0.001))
+        new BigNumber(pair.tokenB.fee?.inPct ?? 0).isGreaterThan(FEE_PCT))
   );
-}
+  return poolpairsWithStabFee;
+};
 
-export { getAllPoolpairs, getPoolpairsWithStabilizationFee };
+/* Anything greater than this percentage is considered to be stab fee */
+export const FEE_PCT = 0.001; // (0.1%)
