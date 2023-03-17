@@ -51,8 +51,10 @@ export default async function handler(
 
     const requestedPoolpair = poolpairsWithStabFee.find(
       (pair) =>
-        pair.tokenA.displaySymbol === tokenADisplaySymbol &&
-        pair.tokenB.displaySymbol === tokenBDisplaySymbol
+        (pair.tokenA.displaySymbol === tokenADisplaySymbol &&
+          pair.tokenB.displaySymbol === tokenBDisplaySymbol) ||
+        (pair.tokenA.displaySymbol === tokenBDisplaySymbol &&
+          pair.tokenB.displaySymbol === tokenADisplaySymbol)
     );
     if (
       requestedPoolpair &&
