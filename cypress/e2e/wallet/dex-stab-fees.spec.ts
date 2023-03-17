@@ -14,7 +14,7 @@ describe("Wallet - Dex Stabilisation Fee", () => {
     });
   });
 
-  it("should should 400 error if params are invalid", () => {
+  it("should throw 400 error if params are invalid", () => {
     cy.request({
       method: "GET",
       url: "/api/v0/wallet/dex-stab-fees",
