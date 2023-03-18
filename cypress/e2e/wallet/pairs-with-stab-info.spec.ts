@@ -9,7 +9,7 @@ describe("Wallet - Poolpairs with Dex Stabilisation Fee", () => {
         "tokenADisplaySymbol",
         "tokenBDisplaySymbol",
         "dexStabilizationFee",
-        "highFeesUrl"
+        "highFeeScanUrl"
       );
       // TODO: Check if we can mock our own poolpair
     });

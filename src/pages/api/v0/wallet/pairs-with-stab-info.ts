@@ -9,7 +9,7 @@ import {
   getAllPoolpairs,
   getPoolpairsWithStabilizationFee,
   PoolPairData,
-} from "./poolpairs.utils";
+} from "utils/poolpairs";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
@@ -23,7 +23,7 @@ type PairWithStabInfo = {
   tokenADisplaySymbol: string;
   tokenBDisplaySymbol: string;
   dexStabilizationFee: string;
-  highFeesUrl: string;
+  highFeeScanUrl: string;
 };
 
 interface PairsWithStabInfoRequest extends NextApiRequest {
@@ -61,20 +61,14 @@ export default async function handle(
         .multipliedBy(100)
         .toFixed(2);
 
-      /* Set the high fees URL */
-      const highFeesUrls = {
-        DFI: "https://defiscan.live/dex/DUSD",
-        dUSDT: "https://defiscan.live/dex/dUSDT-DUSD",
-        dUSDC: "https://defiscan.live/dex/dUSDC-DUSD",
-        dEUROC: "https://defiscan.live/dex/dEUROC-DUSD",
-      };
-      const highFeesUrl = highFeesUrls[tokenBDisplaySymbol];
+      /* Set the high fees URL on Scan */
+      const highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}`;
 
       pairsWithStabInfo.push({
         tokenADisplaySymbol,
         tokenBDisplaySymbol,
         dexStabilizationFee,
-        highFeesUrl,
+        highFeeScanUrl,
       });
     });
 
