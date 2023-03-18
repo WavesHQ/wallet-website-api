@@ -3,13 +3,13 @@ import { NextApiRequest, NextApiResponse } from "next";
 // @ts-ignore
 import Cors from "cors";
 import { EnvironmentNetwork } from "@waveshq/walletkit-core";
-import { runMiddleware } from "../../../../utils/middleware";
 import {
   FEE_PCT,
   getAllPoolpairs,
   getPoolpairsWithStabilizationFee,
   PoolPairData,
 } from "utils/poolpairs";
+import { runMiddleware } from "../../../../utils/middleware";
 
 export const cors = Cors({
   methods: ["GET", "HEAD"],
