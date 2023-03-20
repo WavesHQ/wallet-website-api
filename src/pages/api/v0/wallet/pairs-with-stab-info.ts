@@ -20,10 +20,10 @@ interface Error {
 }
 
 export interface PairWithStabInfo {
+  pairDisplaySymbol: string;
   tokenADisplaySymbol: string;
   tokenBDisplaySymbol: string;
   dexStabilizationFee: string;
-  highFeeScanUrl: string;
 }
 
 interface PairsWithStabInfoRequest extends NextApiRequest {
@@ -65,24 +65,11 @@ export default async function handle(
         .multipliedBy(100)
         .toFixed(2);
 
-      /* Set the high fees URL on Scan */
-      let highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}`;
-      if (
-        [
-          EnvironmentNetwork.DevNet,
-          EnvironmentNetwork.LocalPlayground,
-          EnvironmentNetwork.RemotePlayground,
-          EnvironmentNetwork.TestNet,
-        ].includes(network)
-      ) {
-        highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}?network=${network}`;
-      }
-
       pairsWithStabInfo.push({
+        pairDisplaySymbol: pair.displaySymbol,
         tokenADisplaySymbol,
         tokenBDisplaySymbol,
         dexStabilizationFee,
-        highFeeScanUrl,
       });
     });
 
