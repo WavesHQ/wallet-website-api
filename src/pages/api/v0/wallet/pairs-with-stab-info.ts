@@ -66,7 +66,17 @@ export default async function handle(
         .toFixed(2);
 
       /* Set the high fees URL on Scan */
-      const highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}`;
+      let highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}`;
+      if (
+        [
+          EnvironmentNetwork.DevNet,
+          EnvironmentNetwork.LocalPlayground,
+          EnvironmentNetwork.RemotePlayground,
+          EnvironmentNetwork.TestNet,
+        ].includes(network)
+      ) {
+        highFeeScanUrl = `https://defiscan.live/dex/${pair.displaySymbol}?network=${network}`;
+      }
 
       pairsWithStabInfo.push({
         tokenADisplaySymbol,
