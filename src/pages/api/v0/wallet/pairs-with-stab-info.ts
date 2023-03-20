@@ -15,16 +15,16 @@ export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
-type Error = {
+interface Error {
   error: string;
-};
+}
 
-type PairWithStabInfo = {
+export interface PairWithStabInfo {
   tokenADisplaySymbol: string;
   tokenBDisplaySymbol: string;
   dexStabilizationFee: string;
   highFeeScanUrl: string;
-};
+}
 
 interface PairsWithStabInfoRequest extends NextApiRequest {
   query: { network: EnvironmentNetwork };
