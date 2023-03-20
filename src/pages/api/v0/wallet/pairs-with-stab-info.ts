@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
 import { EnvironmentNetwork } from "@waveshq/walletkit-core";
 import {
-  FEE_PCT,
+  MIN_STAB_FEE_PCT,
   getAllPoolpairs,
   getPoolpairsWithStabilizationFee,
   PoolPairData,
@@ -47,7 +47,11 @@ export default async function handle(
       let tokenBDisplaySymbol = "";
 
       /* Set token with `inPct` to be the tokenA */
-      if (new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(FEE_PCT)) {
+      if (
+        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(
+          MIN_STAB_FEE_PCT
+        )
+      ) {
         tokenADisplaySymbol = pair.tokenA.displaySymbol;
         tokenBDisplaySymbol = pair.tokenB.displaySymbol;
       } else {

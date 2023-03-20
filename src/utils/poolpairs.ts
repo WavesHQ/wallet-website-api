@@ -66,12 +66,16 @@ export const getPoolpairsWithStabilizationFee = (poolpairs: PoolPairData[]) => {
   const poolpairsWithStabFee = poolpairs.filter(
     (pair) =>
       (pair.tokenA.fee?.inPct !== undefined &&
-        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(FEE_PCT)) ||
+        new BigNumber(pair.tokenA.fee?.inPct ?? 0).isGreaterThan(
+          MIN_STAB_FEE_PCT
+        )) ||
       (pair.tokenB.fee?.inPct !== undefined &&
-        new BigNumber(pair.tokenB.fee?.inPct ?? 0).isGreaterThan(FEE_PCT))
+        new BigNumber(pair.tokenB.fee?.inPct ?? 0).isGreaterThan(
+          MIN_STAB_FEE_PCT
+        ))
   );
   return poolpairsWithStabFee;
 };
 
 /* Anything greater than this percentage is considered to be stab fee */
-export const FEE_PCT = 0.001; // (0.1%)
+export const MIN_STAB_FEE_PCT = 0.001; // (0.1%)
