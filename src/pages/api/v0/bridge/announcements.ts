@@ -3,6 +3,7 @@ import Cors from "cors";
 import { runMiddleware } from "../../../../utils/middleware";
 
 interface BridgeAnnouncement {
+  id: string;
   lang: {
     en: string;
   };
@@ -21,6 +22,7 @@ export default async function handle(
   await runMiddleware(req, res, cors);
   res.json([
     {
+      id: "1",
       lang: {
         en: "Join us on this exciting journey as we connect DeFiChain and Ethereum through Quantum",
       },
