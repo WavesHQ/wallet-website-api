@@ -22,7 +22,7 @@ export default async function handle(
   res.json([
     {
       lang: {
-        en: "Hi Bella! ",
+        en: "Join us on this exciting journey as we connect DeFiChain and Ethereum through Quantum",
       },
       version: ">=1.6.1",
       url: "https://birthdayresearch.notion.site/birthdayresearch/Quantum-Documentation-dc1d9174dd294b06833e7859d437e25e",
