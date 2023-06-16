@@ -12,7 +12,6 @@ type BridgeLimits = {
   [network in EnvironmentNetwork]: {
     symbol: string;
     id: string;
-    daily: string;
     max: string;
   }[];
 };
@@ -23,17 +22,27 @@ export default async function handle(
 ): Promise<void> {
   await runMiddleware(req, res, cors);
 
-  const PLAYGROUND_LIMITS = [
-    { symbol: "DFI", id: "0", daily: "1", max: "10" },
-    { symbol: "BTC", id: "1", daily: "1", max: "5" },
-    { symbol: "ETH", id: "2", daily: "2", max: "6" },
+  const TESTNET_LIMITS = [
+    { symbol: "USDT", id: "5", max: "50000" },
+    { symbol: "BTC", id: "1", max: "5000" },
+    { symbol: "ETH", id: "2", max: "5000" },
+    { symbol: "USDC", id: "22", max: "2000" },
+    { symbol: "EUROC", id: "216", max: "150000" },
+  ];
+
+  const MAINNET_LIMITS = [
+    { symbol: "USDT", id: "3", max: "150000" },
+    { symbol: "BTC", id: "2", max: "15" },
+    { symbol: "ETH", id: "1", max: "70" },
+    { symbol: "USDC", id: "13", max: "150000" },
+    { symbol: "EUROC", id: "216", max: "150000" },
   ];
 
   res.json({
     DevNet: [],
-    MainNet: [],
-    Playground: PLAYGROUND_LIMITS,
-    TestNet: [],
-    [EnvironmentNetwork.LocalPlayground]: PLAYGROUND_LIMITS,
+    MainNet: MAINNET_LIMITS,
+    Playground: [],
+    TestNet: TESTNET_LIMITS,
+    [EnvironmentNetwork.LocalPlayground]: [],
   });
 }
