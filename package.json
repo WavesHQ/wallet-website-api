@@ -22,7 +22,7 @@
     "@waveshq/standard-defichain-jellyfishsdk": "^0.51.0",
     "@waveshq/standard-web": "^0.51.0",
     "@waveshq/walletkit-core": "^0.40.0",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "bignumber.js": "^9.1.1",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
