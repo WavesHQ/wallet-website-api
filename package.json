@@ -15,7 +15,7 @@
     "test:e2e": "turbo run test:e2e"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.12",
+    "@headlessui/react": "^1.7.15",
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.2",
     "@tailwindcss/line-clamp": "^0.4.2",

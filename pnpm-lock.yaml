@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@cypress/code-coverage': ^3.10.5
-  '@headlessui/react': ^1.7.12
+  '@headlessui/react': ^1.7.15
   '@netlify/plugin-lighthouse': ^4.0.7
   '@netlify/plugin-nextjs': ^4.31.0
   '@prismicio/client': ^6.7.3
@@ -30,7 +30,7 @@ specifiers:
   schema-dts: ^1.1.2
 
 dependencies:
-  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
   '@prismicio/client': 6.7.3
   '@prismicio/react': 2.5.2_wrodp6pbc64pk2dl4m4urioxiu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
@@ -1867,8 +1867,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
+  /@headlessui/react/1.7.15_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-OTO0XtoRQ6JPB1cKNFYBZv2Q0JMqMGNhYP1CjPvcJvjz8YGokz8oAj89HIYZGN0gZzn/4kk9iUpmMF4Q21Gsqw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
