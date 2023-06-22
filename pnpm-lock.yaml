@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@cypress/code-coverage': ^3.10.5
+  '@cypress/code-coverage': ^3.10.7
   '@headlessui/react': ^1.7.12
   '@netlify/plugin-lighthouse': ^4.0.7
   '@netlify/plugin-nextjs': ^4.31.0
@@ -50,7 +50,7 @@ dependencies:
   schema-dts: 1.1.2_typescript@4.9.5
 
 devDependencies:
-  '@cypress/code-coverage': 3.10.5_3tcoj6n52jqx2qqhef54glmqnm
+  '@cypress/code-coverage': 3.10.7_3tcoj6n52jqx2qqhef54glmqnm
   '@netlify/plugin-lighthouse': 4.0.7
   '@netlify/plugin-nextjs': 4.31.0
   '@testing-library/cypress': 9.0.0_cypress@12.7.0
@@ -1515,8 +1515,8 @@ packages:
     resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
     dev: false
 
-  /@cypress/code-coverage/3.10.5_3tcoj6n52jqx2qqhef54glmqnm:
-    resolution: {integrity: sha512-S2o7dD91CdD2JZfj/EFNn1EPXz7cH2Uc8WjTcW3DnZU1Z9H+m6TP6HHOJRDCZSsuEZbZARtr3K6S+xTD7ocxnQ==}
+  /@cypress/code-coverage/3.10.7_3tcoj6n52jqx2qqhef54glmqnm:
+    resolution: {integrity: sha512-kQFB8GemDAAk6JBINsR9MLEgCw2AKb3FcdHQjIJ3KV4ZER6ZF0NGdO8SRj5oTVp28oqfOab4cgoBdecRiOE3qA==}
     peerDependencies:
       cypress: '*'
     dependencies:

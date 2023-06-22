@@ -35,7 +35,7 @@
     "schema-dts": "^1.1.2"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.10.5",
+    "@cypress/code-coverage": "^3.10.7",
     "@testing-library/cypress": "^9.0.0",
     "@waveshq/standard-web-linter": "^0.51.0",
     "@netlify/plugin-lighthouse": "^4.0.7",
