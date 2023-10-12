@@ -8,7 +8,7 @@ export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
-export default async function handle(
+export default async function handle (
   req: NextApiRequest,
   res: NextApiResponse<FeatureFlag[]>
 ): Promise<void> {
@@ -26,6 +26,7 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -42,6 +43,7 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -58,6 +60,7 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -74,6 +77,7 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -90,6 +94,7 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -121,6 +126,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -137,6 +144,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -153,6 +162,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -187,6 +198,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -203,6 +216,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -219,6 +234,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -235,6 +252,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -251,6 +270,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -267,6 +288,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -283,6 +306,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -299,6 +324,8 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
@@ -315,6 +342,22 @@ export default async function handle(
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
+      ],
+      platforms: ["ios", "android", "web"],
+      app: ["MOBILE_LW"],
+    },
+    {
+      id: "evm",
+      name: "EVM",
+      stage: "public",
+      version: ">2.14.0",
+      description: "Enables seamless bidirectional transfer between EVM and DVM",
+      networks: [
+        EnvironmentNetwork.RemotePlayground,
+        EnvironmentNetwork.LocalPlayground,
+        EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],

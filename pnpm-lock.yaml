@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.0.4
     version: 1.0.4(@babel/core@7.22.5)(@next/env@13.4.7)(redux@4.2.1)
   '@waveshq/walletkit-core':
-    specifier: ^0.51.0
-    version: 0.51.0
+    specifier: ^1.3.6
+    version: 1.3.6
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.24)
@@ -406,6 +406,7 @@ packages:
   /@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.22.5):
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
     engines: {node: '>=4'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -3092,8 +3093,8 @@ packages:
       - supports-color
     dev: false
 
-  /@waveshq/walletkit-core@0.51.0:
-    resolution: {integrity: sha512-tRCRcTVD0UrgIEEZfVHDaEuEgMO3QKmgthoUNNqwY42wqRa5szub+KuQaTehK7YZLjCjBiUzRWgkjumV5Zo2kQ==}
+  /@waveshq/walletkit-core@1.3.6:
+    resolution: {integrity: sha512-gJowy0JIH/pbH16QwIfNQmrwFjKQ259PJb9VTYYzMs/G3Bz06kT6UiBL/njfXSc6CqTu9tcNi3/juYK7jEK1Tg==}
     dependencies:
       bignumber.js: 9.1.1
       ethers: 5.7.2
@@ -3830,6 +3831,7 @@ packages:
   /buildcheck@0.0.6:
     resolution: {integrity: sha512-8f9ZJCUXyT1M35Jx7MkBgmBMo3oHTTBIPLiY9xyL0pl3T5RwcPEY8cUHr5LBNfu/fk6c2T4DJZuVM/8ZZT2D2A==}
     engines: {node: '>=10.0.0'}
+    requiresBuild: true
     dev: false
     optional: true
 
