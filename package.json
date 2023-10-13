@@ -43,7 +43,7 @@
     "@types/lodash": "^4.14.195",
     "@types/node": "^18.13.0",
     "@waveshq/standard-web-linter": "^1.0.4",
-    "cypress": "^12.15.0"
+    "cypress": "^12.17.4"
   },
   "engines": {
     "node": ">=18.0.0",

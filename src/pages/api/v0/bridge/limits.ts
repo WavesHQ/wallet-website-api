@@ -44,5 +44,6 @@ export default async function handle(
     Playground: [],
     TestNet: TESTNET_LIMITS,
     [EnvironmentNetwork.LocalPlayground]: [],
+    Changi: TESTNET_LIMITS,
   });
 }
