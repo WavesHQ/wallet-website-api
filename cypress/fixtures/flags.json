@@ -113,10 +113,10 @@
   },
   {
     "id": "service_provider",
-    "name": "Service Provider",
+    "name": "Custom Service Provider",
     "stage": "beta",
     "version": ">1.13.0",
-    "description": "Allows the usage of custom server provider url",
+    "description": "Allows to customize the service providers for both DVM and EVM. Proceed with caution.",
     "networks": [
       "MainNet",
       "TestNet",
