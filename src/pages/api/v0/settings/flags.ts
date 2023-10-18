@@ -8,7 +8,7 @@ export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
-export default async function handle (
+export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse<FeatureFlag[]>
 ): Promise<void> {
@@ -350,7 +350,7 @@ export default async function handle (
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
         EnvironmentNetwork.Changi,
-        EnvironmentNetwork.TestNet
+        EnvironmentNetwork.TestNet,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
