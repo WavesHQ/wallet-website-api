@@ -321,7 +321,7 @@
     "stage": "public",
     "version": ">2.14.0",
     "description": "Enables seamless bidirectional transfer between EVM and DVM",
-    "networks": ["Playground", "Local", "DevNet", "Changi", "TestNet"],
+    "networks": ["TestNet", "Playground", "Local", "DevNet", "Changi"],
     "platforms": ["ios", "android", "web"],
     "app": ["MOBILE_LW"]
   },
@@ -331,7 +331,7 @@
     "stage": "public",
     "version": ">=2.27.0",
     "description": "Allow borrowing of DUSD for vault with only DUSD as collateral",
-    "networks": ["Playground", "Local", "DevNet", "Changi", "TestNet"],
+    "networks": ["TestNet", "Playground", "Local", "DevNet", "Changi"],
     "platforms": ["ios", "android", "web"],
     "app": ["MOBILE_LW"]
   }
