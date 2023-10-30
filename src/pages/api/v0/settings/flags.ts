@@ -346,11 +346,28 @@ export default async function handle(
       description:
         "Enables seamless bidirectional transfer between EVM and DVM",
       networks: [
+        EnvironmentNetwork.TestNet,
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
         EnvironmentNetwork.Changi,
+      ],
+      platforms: ["ios", "android", "web"],
+      app: ["MOBILE_LW"],
+    },
+    {
+      id: "loop_dusd",
+      name: "Allow DUSD loop loan",
+      stage: "public",
+      version: ">=2.27.0",
+      description:
+        "Allow borrowing of DUSD for vault with only DUSD as collateral",
+      networks: [
         EnvironmentNetwork.TestNet,
+        EnvironmentNetwork.RemotePlayground,
+        EnvironmentNetwork.LocalPlayground,
+        EnvironmentNetwork.DevNet,
+        EnvironmentNetwork.Changi,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
