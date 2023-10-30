@@ -368,7 +368,6 @@ export default async function handle(
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
         EnvironmentNetwork.Changi,
-        EnvironmentNetwork.TestNet,
       ],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
