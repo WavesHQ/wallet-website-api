@@ -8,7 +8,7 @@ export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
-export default async function handle(
+export default async function handle (
   req: NextApiRequest,
   res: NextApiResponse<FeatureFlag[]>
 ): Promise<void> {
@@ -363,7 +363,6 @@ export default async function handle(
       description:
         "Allow borrowing of DUSD for vault with only DUSD as collateral",
       networks: [
-        EnvironmentNetwork.TestNet,
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
