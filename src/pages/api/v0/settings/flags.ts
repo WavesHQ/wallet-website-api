@@ -363,7 +363,6 @@ export default async function handle(
       description:
         "Allow borrowing of DUSD for vault with only DUSD as collateral",
       networks: [
-        EnvironmentNetwork.TestNet,
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,
         EnvironmentNetwork.DevNet,
