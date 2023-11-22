@@ -338,7 +338,14 @@
     "stage": "public",
     "version": ">=2.27.0",
     "description": "Allow borrowing of DUSD for vault with only DUSD as collateral",
-    "networks": ["TestNet", "Playground", "Local", "DevNet", "Changi"],
+    "networks": [
+      "MainNet",
+      "TestNet",
+      "Playground",
+      "Local",
+      "DevNet",
+      "Changi"
+    ],
     "platforms": ["ios", "android", "web"],
     "app": ["MOBILE_LW"]
   }
