@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
-    "@prismicio/client": "^7.1.0",
+    "@prismicio/client": "^7.3.1",
     "@prismicio/react": "^2.7.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@waveshq/standard-defichain-jellyfishsdk": "^1.0.4",
