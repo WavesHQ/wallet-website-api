@@ -346,6 +346,7 @@ export default async function handle(
       description:
         "Enables seamless bidirectional transfer between EVM and DVM",
       networks: [
+        EnvironmentNetwork.MainNet,
         EnvironmentNetwork.TestNet,
         EnvironmentNetwork.RemotePlayground,
         EnvironmentNetwork.LocalPlayground,

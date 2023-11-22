@@ -321,7 +321,14 @@
     "stage": "public",
     "version": ">2.14.0",
     "description": "Enables seamless bidirectional transfer between EVM and DVM",
-    "networks": ["TestNet", "Playground", "Local", "DevNet", "Changi"],
+    "networks": [
+      "MainNet",
+      "TestNet",
+      "Playground",
+      "Local",
+      "DevNet",
+      "Changi"
+    ],
     "platforms": ["ios", "android", "web"],
     "app": ["MOBILE_LW"]
   },
