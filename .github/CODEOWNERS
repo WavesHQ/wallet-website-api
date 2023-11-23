@@ -1,23 +1,23 @@
 # Define individuals that are responsible for code in a repository.
 # More details are here: https://help.github.com/articles/about-codeowners/
 
-/.github/                                       @thedoublejay
-/.husky/                                        @thedoublejay
+/.github/                                       @fullstackninja864 @lykalabrada @pierregee
+/.husky/                                        @fullstackninja864 @lykalabrada @pierregee
 
-/src/                                           @thedoublejay @lykalabrada
-/cypress/                                       @thedoublejay @mikhail-zlochevskyi @izzycsy @lykalabrada
+/src/                                           @fullstackninja864 @lykalabrada @pierregee
+/cypress/                                       @fullstackninja864 @lykalabrada @pierregee
 
-/src/styles/                                    @thedoublejay @lykalabrada
-postcss.config.js                               @thedoublejay @lykalabrada
-tailwind.config.js                              @thedoublejay @lykalabrada
+/src/styles/                                    @fullstackninja864 @lykalabrada @pierregee
+postcss.config.js                               @fullstackninja864 @lykalabrada @pierregee
+tailwind.config.js                              @fullstackninja864 @lykalabrada @pierregee
 
-/public/                                        @thedoublejay @lykalabrada
+/public/                                        @fullstackninja864 @lykalabrada @pierregee
 
-next.config.js                                  @thedoublejay
-package.json                                    @thedoublejay
-package-lock.json                               @thedoublejay
-tsconfig.json                                   @thedoublejay
+next.config.js                                  @fullstackninja864 @lykalabrada @pierregee
+package.json                                    @fullstackninja864 @lykalabrada @pierregee
+package-lock.json                               @fullstackninja864 @lykalabrada @pierregee
+tsconfig.json                                   @fullstackninja864 @lykalabrada @pierregee
 
-CONTRIBUTING.md                                 @thedoublejay
-README.md                                       @thedoublejay
-LICENSE                                         @thedoublejay
+CONTRIBUTING.md                                 @fullstackninja864 @lykalabrada @pierregee
+README.md                                       @fullstackninja864 @lykalabrada @pierregee
+LICENSE                                         @fullstackninja864 @lykalabrada @pierregee
