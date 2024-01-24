@@ -379,16 +379,8 @@ export default async function handle(
       name: "Allow to save tx",
       stage: "public",
       version: ">=2.37.0",
-      description:
-        "Allow to save tx in mainnet",
-      networks: [
-        EnvironmentNetwork.MainNet,
-        EnvironmentNetwork.TestNet,
-        EnvironmentNetwork.RemotePlayground,
-        EnvironmentNetwork.LocalPlayground,
-        EnvironmentNetwork.DevNet,
-        EnvironmentNetwork.Changi,
-      ],
+      description: "Allow to save tx in mainnet",
+      networks: [EnvironmentNetwork.MainNet],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
     },
