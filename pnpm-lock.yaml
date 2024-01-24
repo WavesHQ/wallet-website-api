@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.0.4
     version: 1.0.4(@babel/core@7.22.5)(@next/env@13.4.7)(redux@4.2.1)
   '@waveshq/walletkit-core':
-    specifier: ^1.3.8
-    version: 1.3.8
+    specifier: ^1.3.10
+    version: 1.3.10
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.24)
@@ -1437,7 +1437,7 @@ packages:
     peerDependencies:
       defichain: ^3.31.1
     dependencies:
-      bignumber.js: 9.1.1
+      bignumber.js: 9.1.2
       bn.js: 5.2.1
       defichain: 3.31.1
       smart-buffer: 4.2.0
@@ -1465,7 +1465,7 @@ packages:
       defichain: ^3.31.1
     dependencies:
       '@types/lossless-json': 1.0.1
-      bignumber.js: 9.1.1
+      bignumber.js: 9.1.2
       defichain: 3.31.1
       lossless-json: 1.0.5
     dev: false
@@ -1475,7 +1475,7 @@ packages:
     peerDependencies:
       defichain: ^3.31.1
     dependencies:
-      bignumber.js: 9.1.1
+      bignumber.js: 9.1.2
       defichain: 3.31.1
     dev: false
 
@@ -3093,8 +3093,8 @@ packages:
       - supports-color
     dev: false
 
-  /@waveshq/walletkit-core@1.3.8:
-    resolution: {integrity: sha512-e1NHf+9OerCCq3kqtsUOd+fn3FyvBlQGDRpjlhyGRxdiuLhc3EuyJWbFzglvmPf97aj726Rgh8NrvIlC+8JssQ==}
+  /@waveshq/walletkit-core@1.3.10:
+    resolution: {integrity: sha512-bK8fV9v+8m7W0cbN9fFesi3wiOff+ev6y9LzQFhSiH0pcm8Bnk7kb4DL3paqL9tqUi6nw8RbFbYloLYLEuMuRg==}
     dependencies:
       bignumber.js: 9.1.2
       ethers: 5.7.2
