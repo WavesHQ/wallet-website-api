@@ -8,7 +8,7 @@ export const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 
-export default async function handle(
+export default async function handle (
   req: NextApiRequest,
   res: NextApiResponse<FeatureFlag[]>
 ): Promise<void> {
@@ -371,16 +371,6 @@ export default async function handle(
         EnvironmentNetwork.DevNet,
         EnvironmentNetwork.Changi,
       ],
-      platforms: ["ios", "android", "web"],
-      app: ["MOBILE_LW"],
-    },
-    {
-      id: "save_tx",
-      name: "Allow to save tx",
-      stage: "public",
-      version: ">=2.37.0",
-      description: "Allow to save tx in mainnet",
-      networks: [EnvironmentNetwork.MainNet],
       platforms: ["ios", "android", "web"],
       app: ["MOBILE_LW"],
     },
